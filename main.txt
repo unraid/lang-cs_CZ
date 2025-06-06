@@ -409,6 +409,6 @@ for more information=pro více informací
 Make sure your server supports S3 sleep=Ujisti se, že tvůj server podporuje režim spánku S3
 Sleep will immediately put the server in sleep mode=**Režim spánku** okamžitě přepne server do spánkového režimu
 Sleeping=Spí
-System in sleep mode=System je v režimu spánku
+System in sleep mode=Systém je v režimu spánku
 This will put the system in sleep mode=Tím se systém přepne do režimu spánku
 wiki entry=Záznam na Wikipedi
