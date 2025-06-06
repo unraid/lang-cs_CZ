@@ -8,5 +8,4 @@ Backup File=Záložní soubor
 Editing=Upravuji
 Generally, it is not recommended to change the format=Obecně se nedoporučuje měnit formát souboru
 Credits=Autoři
-No Backup File Found=Nenalezen žádný záložní soubor
 File Format=Formát souboru
