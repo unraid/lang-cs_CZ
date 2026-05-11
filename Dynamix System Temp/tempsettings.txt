@@ -1,42 +1,47 @@
-Array fan speed=
-Available drivers=
-Click DETECT=
-Detect=
-Load drivers=
-Mainboard temperature=
-No drivers detected=
-Not used=
-Perl must be installed to do automated driver detection=**Perl** must be installed to do automated driver detection
-Processor temperature=
-Rescan=
-Save=
-Sensors=
-Unload drivers=
+Array fan speed=Rychlost ventilátoru pole
+Available drivers=Ovladače k dispozici
+Click DETECT=Klepněte na ZJISTIT
+Detect=Zjistit
+Load drivers=Načíst ovladače
+Mainboard temperature=Teplota základní desky
+No drivers detected=Nebyly zjištěny žádné ovladače
+Not used=Nepoužito
+Perl must be installed to do automated driver detection=Pro automatické zjištění ovladačů musíte nainstalovat **Perl**
+Processor temperature=Teplota procesoru
+Rescan=Znovu skenovat
+Save=Uložit
+Sensors=Senzory
+Unload drivers=Uvolnit ovladače
 
 :temp_drivers_plug:
-> Use 'detect' to search for available drivers using the 'sensors-detect' script. After detection proceed with saving the list.<br>
-> Use 'save' to store the drivers list to disk, the drivers field may be edited before saving (e.g. add a non-specified driver). Saving is mandatory.<br>
-> Use 'load drivers / unload drivers' to manually load or unload the available driver modules.
+> Použijte možnost **„detekovat“** pro vyhledání dostupných ovladačů pomocí skriptu `sensors-detect`. Po detekci pokračujte uložením seznamu.<br>
+> Použijte možnost **„uložit“** pro uložení seznamu ovladačů na disk. Pole s ovladači lze před uložením upravit (např. přidat ručně nedetekovaný ovladač). Uložení je povinné.<br>
+> Použijte **„načíst / odpojit ovladače“** pro ruční načtení nebo odpojení dostupných modulů ovladačů.
 :end
+
 
 :temp_processor_plug:
-> Select one of the available probes as the processor temperature indicator.
-> The output of this probe is shown at the bottom of the page.
-> Select 'Not used' to suppress display of this probe.
+> Vyberte jednu z dostupných sond jako indikátor teploty procesoru.
+> Výstup této sondy se zobrazí ve spodní části stránky.
+> Zvolte „Nepoužito“, pokud si nepřejete tuto sondu zobrazovat.
 :end
+
 
 :temp_mainboard_plug:
-> Select one of the available probes as the mainboard temperature indicator.
-> The output of this probe is shown at the bottom of the page.
-> Select 'Not used' to suppress display of this probe.
+> Vyberte jednu z dostupných sond jako indikátor teploty základní desky.
+> Výstup této sondy se zobrazí ve spodní části stránky.
+> Zvolte „Nepoužito“, pokud si nepřejete tuto sondu zobrazovat.
 :end
+
 
 :temp_fan_plug:
-> Select one of the available probes as the array fan speed indicator.
-> The output of this probe is shown at the bottom of the page.
-> Select 'Not used' to suppress display of this probe.
+> Vyberte jednu z dostupných sond jako indikátor otáček ventilátoru pro array.
+> Výstup této sondy se zobrazí ve spodní části stránky.
+> Zvolte „Nepoužito“, pokud si nepřejete tuto sondu zobrazovat.
 :end
 
+
 :temp_rescan_plug:
-> 'Rescan' refreshes the selection list and can be used when new probes are available, e.g. a new fan probe has been installed.
+> Možnost **„Přeskenovat“** aktualizuje výběrový seznam a lze ji použít, pokud jsou k dispozici nové sondy, např. po instalaci nové sondy ventilátoru.
 :end
+

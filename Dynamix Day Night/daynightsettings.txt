@@ -1,31 +1,32 @@
-Automatic theming=
-Bing API key=
-Bing=
-City name=
-Country name=
-Day theme=
-Geocoding service=
-Google API key=
-Google=
-MapQuest API key=
-MapQuest=
-Night theme=
-No geographical coordinates found for the given address=
-Please adjust=
-Postal code=
-See=
-Street address=
-this site=
-to obtain a Bing API key=
-to obtain a Google API key=
-to obtain a MapQuest API key=
+Automatic theming=Automatické téma
+Bing API key=Klíč API Bingu
+Bing=Bing
+City name=Jméno města
+Country name=Název země
+Day theme=Denní téma
+Geocoding service=Služba geocodingu
+Google API key=Klíč API Google
+Google=Google
+MapQuest API key=Klíč API MapQuestu
+MapQuest=MapQuest
+Night theme=Noční téma
+No geographical coordinates found for the given address=Pro zadanou adresu nebyly nalezeny geografické souřadnice
+Please adjust=Prosím upravte
+Postal code=PSČ
+See=Viz
+Street address=Název ulice
+this site=tato stránka
+to obtain a Bing API key=pro získání klíče API Bingu
+to obtain a Google API key=pro získání klíče API Googlu
+to obtain a MapQuest API key=pro získání klíče API MapQuestu
 
 :day_night_plug:
-> Enter your address information (street, city, country) which is used to calculate the sunrise and sunset times of your location.
+> Zadejte adresu (ulice, město, země), která se použije pro výpočet času východu a západu slunce.
 >
-> A geocoding service is used to convert your address to geographical (latitude and longitude) coordinates.<br>
-> You need to register with one of the available services and get a unique API key to make use of their service.
+> Geocodingová služba se použije pro převod vaší adresy na geografické souřadnice.<br>
+> Musíte se zaregistrovat do jedné z dostupných služeb a získat unikátní klíč k API.
 >
-> The **day** theme is selected between sunrise and sunset<br>
-> The **night** theme is selected between sunset and sunrise
+> **Denní** téma se použije mezi východem a západem slunce.<br>
+> **Noční** téma se použije mezi západem a východem slunce.
 :end
+

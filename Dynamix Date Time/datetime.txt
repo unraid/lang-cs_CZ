@@ -1,41 +1,49 @@
-Current date and time=
-Hide map=
-New date and time=
-NTP server=
-Show map=
-Time zone=
-Use NTP=
+Current date and time=Současné datum a čas
+Hide map=Skrýt mapu
+New date and time=Nové datum a čas
+NTP server=Server NTP
+Show map=Zobrazit mapu
+Time zone=Časové pásmo
+Use NTP=Použít NTP
 
 :timezone_plug:
-> Select your applicable time zone from the drop-down list.
+> Ze seznamu si vyberte příslušné časové pásmo.
 :end
+
 
 :datetime_map_plug:
-> The world map highlights the current selected time zone.
+> Mapa světa zvýrazní vaše vybrané časové pásmo.
 >
-> Use your mouse to move over the map and click on the country for which you want to set the time zone. The appropriate zone is automatically selected in the drop-down list.
+> Myší přejeďte přes mapu a klepněte na zemi pro kterou chcete nastavit časové pásmo. Příslušné časové pásmo se automaticky vybere ze seznamu.
 :end
+
 
 :use_ntp_plug:
-> Select 'Yes' to use Network Time Protocol to keep your server time accurate.
-> We **highly** recommend the use of a network time server, especially if you plan on using Active Directory.
+> Pro použití protokolu Network Time Protocol k udržování přesného času vyberte 'Ano'.
+> **Silně** doporučujeme použít síťový časový server, obzvláště v případě, že plánujete použít Active Directory.
 :end
+
 
 :ntp_server1_plug:
-> This is the primary NTP server to use.  Enter a FQDN or an IP address.
+> Toto je primární NTP server.  Zadejte doménové jméno nebo IP adresu.
 :end
+
 
 :ntp_server2_plug:
-> This is the alternate NTP server to use if NTP Server 1 is down.
+> Toto je alternativní NTP server, použije se v případě že server NTP č. 1 je nedostupný.
 :end
+
 
 :ntp_server3_plug:
-> This is the alternate NTP Server to use if NTP Servers 1 and 2 are both down.
+> Toto je alternativní NTP server, použije se v případě že servery NTP č. 1 a 2 jsou nedostupné.
 :end
 
+
 :ntp_server4_plug:
-> This is the alternate NTP Server to use if NTP Servers 1, 2, and 3 are all down.
+> Toto je alternativní NTP server, použije se v případě že servery NTP č. 1, 2 a 3 jsou nedostupné.
 :end
+
 :current_time_plug:
-> Enter the current time-of-day.  Use format YYYY-MM-DD HH:MM:SS. Greyed out when using NTP.
+> Zadejte současný čas. Použijte formát YYYY-MM-DD HH:MM:SS. Při použití NTP je zašedlé.
 :end
+

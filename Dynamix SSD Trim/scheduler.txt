@@ -1,40 +1,44 @@
-Any=
-Daily schedule=
-Day Date=Day / Date
-Hour=
-Hourly schedule=
-Minute=
-Monthly schedule=
-Scheduled Tasks=
-Weekly schedule=
-Day of the month=
-Day of the week=
-Every 2 hours=
-Every 3 hours=
-Every 4 hours=
-Every 6 hours=
-Every 8 hours=
-Every hour=
+Any=Jakákoliv
+Daily schedule=Denní rozvrh
+Day Date=Den / Datum
+Hour=Hodina
+Hourly schedule=Hodinový rozvrh
+Minute=Minuta
+Monthly schedule=Měsíční rozvrh
+Scheduled Tasks=Naplánované úlohy
+Weekly schedule=Týdenní rozvrh
+Day of the month=Den v měsíci
+Day of the week=Den v týdnu
+Every 2 hours=Každé 2 hodiny
+Every 3 hours=Každé 3 hodiny
+Every 4 hours=Každé 4 hodiny
+Every 6 hours=Každých 6 hodin
+Every 8 hours=Každých 8 hodin
+Every hour=Každou hodinu
 HHMM=HH:MM
-SSD TRIM schedule=
-Time of the day=
+SSD TRIM schedule=Rozvrh SSD TRIM
+Time of the day=Čas dne
 
 :trim_schedule_plug:
-> Choose a trim schedule ranging from hourly, daily, weekly and monthly.
+> Zvolte plán trimování v rozsahu hodinového, denního, týdenního nebo měsíčního.
 >
-> The interval determines how often SSD trim will run, it runs in the background.
+> Interval určuje, jak často se trim SSD spustí – běží na pozadí.
 :end
+
 
 :trim_day_of_the_week_plug:
-> Choose a day when the weekly schedule is selected. Otherwise disabled.
+> Zvolte den, kdy se má trim spustit při týdenním plánu. Jinak je tato volba neaktivní.
 :end
+
 
 :trim_day_of_the_month_plug:
-> Choose a date when the monthly schedule is selected. Otherwise disabled.
+> Zvolte den v měsíci, kdy se má trim spustit při měsíčním plánu. Jinak je tato volba neaktivní.
 :end
 
+
 :trim_time_of_the_day_plug:
-> When an hourly schedule is selected this will set the interval in hours. An interval always starts on the whole hour (minute 0).
+> Při výběru hodinového plánu nastavíte interval v hodinách. Interval vždy začíná v celou hodinu (minuta 0).
 >
-> For the other schedules choose here the time of the day trim should start.
+> U ostatních plánů zvolte, v kolik hodin se má trim spustit.
 :end
+

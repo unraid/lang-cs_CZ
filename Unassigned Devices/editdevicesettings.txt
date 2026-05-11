@@ -1,102 +1,110 @@
-Abort Device Script=
-Attach=
-Attach This Disk=
-Attaching=
-Automount=
-Click to select file or click Default button for the Device Script File=
-Default=
-Delete Device Script File=
-Detach=
-Detach This Disk=
-Detaching=
-Device Script=
-Device Script content=
-Disable Mount and Unmount Button=
-Disable Mount Button=
-Disk Name=
-Disk Serial=
-Edit Device Script=
-Enter Device Script File Name=
-Enter and Edit the Device Script that runs when a udev or operator event occurs=
-Enter the User Script File Name=
-Enter the User Script that will be using this device=
-Enter the volume to mount on this apfs partition=
-Load the default Device Script=
-Run in background=
-Mark this Device as passed through to a VM or Docker=
-Mount Device Read only=
-Mount Device when Plugged in or Array is Started=
-Mount ISO File when Array is Started=
-Mount Point=
-Mount Remote Share Read only=
-Mount Remote SMB or NFS Share when Array is Started=
-Note: Enable SMB Sharing or NFS Export in Unassigned Devices Settings to share this device=
-Passed Through=
-Read Only=
-Run Device Script File in the background=
-Save your Device Script File=
-Save your Device Script File changes=
-Share Device with SMB and NFS=
-Share Remote Mount with SMB and NFS=
-Show all partitions on this device by default=
-Show Partitions=
-Source=
-Unassigned Devices Settings=
-Undo your changes since last Save=
-User Script=
-Volume=
-ZFS Volume=
+Abort Device Script=Zrušit skript zařízení
+Attach=Připojit
+Attach This Disk=Připojit tento disk
+Attaching=Připojování
+Automount=Automaticky připojit
+Click to select file or click Default button for the Device Script File=Klikni pro výběr souboru nebo klikni na Výchozí pro skript zařízení
+Default=Výchozí
+Delete Device Script File=Smazat skript zařízení
+Detach=Odpojit
+Detach This Disk=Odpojit tento disk
+Detaching=Odpojuje se
+Device Script=Skript zařízení
+Device Script content=Obsah skriptu zařízení
+Disable Mount and Unmount Button=Zakázat tlačítka Připojit a Odpojit
+Disable Mount Button=Zakázat tlačítko Připojit
+Disk Name=Název disku
+Disk Serial=Sériové číslo disku
+Edit Device Script=Upravit skript zařízení
+Enter Device Script File Name=Zadej název souboru skriptu zařízení
+Enter and Edit the Device Script that runs when a udev or operator event occurs=Zadej a uprav skript zařízení, který se spustí při události udev nebo operátora
+Enter the User Script File Name=Zadej název souboru uživatelského skriptu
+Enter the User Script that will be using this device=Zadej uživatelský skript, který bude používat toto zařízení
+Enter the volume to mount on this apfs partition=Zadej svazek k připojení na této apfs partition
+Load the default Device Script=Načíst výchozí skript zařízení
+Run in background=Spustit na pozadí
+Mark this Device as passed through to a VM or Docker=Označit zařízení jako předané VM nebo Dockeru
+Mount Device Read only=Připojit zařízení jen pro čtení
+Mount Device when Plugged in or Array is Started=Připojit zařízení při zapojení nebo spuštění pole
+Mount ISO File when Array is Started=Připojit ISO soubor při spuštění pole
+Mount Point=Bod připojení
+Mount Remote Share Read only=Připojit vzdálenou sdílenou složku jen pro čtení
+Mount Remote SMB or NFS Share when Array is Started=Připojit vzdálenou SMB nebo NFS sdílenou složku při spuštění pole
+Note: Enable SMB Sharing or NFS Export in Unassigned Devices Settings to share this device=Poznámka: Aktivuj SMB sdílení nebo NFS export v nastavení nepřiřazených zařízení pro sdílení tohoto zařízení
+Passed Through=Předáno (Passthrough)
+Read Only=Jen pro čtení
+Run Device Script File in the background=Spustit skript zařízení na pozadí
+Save your Device Script File=Uložit skript zařízení
+Save your Device Script File changes=Uložit změny skriptu zařízení
+Share Device with SMB and NFS=Sdílet zařízení přes SMB a NFS
+Share Remote Mount with SMB and NFS=Sdílet vzdálené připojení přes SMB a NFS
+Show all partitions on this device by default=Zobrazit všechny oddíly tohoto zařízení jako výchozí
+Show Partitions=Zobrazit oddíly
+Source=Zdroj
+Unassigned Devices Settings=Nastavení nepřiřazených zařízení
+Undo your changes since last Save=Vrátit změny od posledního uložení
+User Script=Uživatelský skript
+Volume=Svazek
+ZFS Volume=ZFS svazek
 
 ;
 ; Help
 ;
 :ud_edit_script_device_settings_plug:
-> Select the options for this device and mount point.
+> Vyber možnosti pro tento disk/přípojný bod. Změny se projeví okamžitě. Není třeba kliknout na **Uložit**, aby byly uloženy.
 :end
+
 
 :ud_edit_script_detach_plug:
-> Click **Detach** to detach the device.  The device will then show in Historical Devices and can be Attached from the device settings there.
+> Klikni na **Odpojit**, abys odpojil disk. Disk se pak zobrazí v části „Předchozí disky“ a může být znovu připojen v nastavení disku.
 :end
+
 
 :ud_edit_script_attach_plug:
-> Click **Attach** to attach a device that has been detached.  This will act like the device was just installed and will auto mount if 'Auto Mount' is on.  It will take a while for the device to show up in UD.
+> Klikni na **Připojit**, abys znovu připojil dříve odpojený disk. Disk se bude chovat, jako by byl nově připojen, a automaticky se připojí, pokud je aktivováno „Automatické připojení“. Zobrazení v UD může chvíli trvat.
 :end
+
 
 :ud_edit_script_abort_plug:
-> Click **Abort** to abort the device script.
+> Klikni na **Zrušit**, abys přerušil provádění skriptu zařízení.
 :end
+
 
 :ud_disk_name_plug:
-> Enter the alias name for this device.  This is the name you want to use to refer to this drive.  Leave the name blank and the 'devX' will be assigned.
+> Zadej aliasový název pro tento disk. Tento název bude použit pro odkazování na disk. Pokud ponecháš prázdné, bude přiřazeno „devX“.
 >
-> **Name:** 8 characters max, spaces converted to '_', minimal special characters allowed, name is case sensitive.
+> **Název:** Max. 8 znaků, mezery budou převedeny na "_", povoleno minimum speciálních znaků, rozlišuje se velikost písmen.
 >
-> **Note:** Cannot contain "dev" as the first characters.  This is reserved for the 'devX' devices.
+> **Poznámka:** Název nesmí začínat „dev“. Toto je vyhrazeno pro zařízení typu „devX“.
 :end
+
 
 :ud_edit_script_choose_name_plug:
-> This is the Script File that runs when the device is mounted. Choose your Script File name from the file selection dropdown, or enter your desired script.
+> Toto je skriptový soubor, který se spustí při připojení disku. Vyber název skriptového souboru z rozbalovacího seznamu nebo zadej vlastní.
 :end
+
 
 :ud_edit_user_script_choose_name_plug:
-> If you have the User Scripts plugin installed, you can have
-Unassigned Devices show the running status of the User Script that will be using this device. This field will only be enabled when a Device Script File exists.
+> Pokud máš nainstalovaný plugin „User Scripts“, může Unassigned Devices zobrazit stav spuštění uživatelského skriptu přiřazeného k tomuto zařízení. Toto pole se aktivuje pouze tehdy, když existuje skript zařízení.
 :end
+
 
 :ud_edit_script_run_background_plug:
-> Set to **Yes** to have the Device Script run as a background task.  This can keep the Unassigned Devices UI from hanging when the script is run from the UI.
+> Nastav tuto volbu na **Ano**, pokud chceš, aby se skript zařízení spouštěl na pozadí. To může zabránit zamrznutí uživatelského rozhraní Unassigned Devices při spouštění skriptu.
 :end
 
+
 :ud_edit_script_buttons_plug:
-> Click **Default** to initialize the edit box with a default Device Script. You still need to click **Save** in order to commit the change.
+> Klikněte na **Výchozí**, chcete-li inicializovat editační pole s výchozím skriptem zařízení. Pro uložení změny je stále nutné kliknout na **Uložit**.
 >
-> Click **Save** to save your Device Script file.
+> Klikněte na **Uložit**, chcete-li uložit soubor se skriptem zařízení.
 >
-> Click **Delete** to delete the Device Script file.
+> Klikněte na **Smazat**, chcete-li smazat soubor se skriptem zařízení.
 >
-> Click **Reset** to undo any changes you make (before Saving).
+> Klikněte na **Obnovit**, chcete-li vrátit provedené změny (před uložením).
 >
-> Click **Apply** to commit the current edits.
+> Klikněte na **Použít**, chcete-li potvrdit aktuální úpravy.
 >
-> Click **Done** to exit this page.
+> Klikněte na **Hotovo**, chcete-li opustit tuto stránku.
 :end
+

@@ -1,24 +1,25 @@
-Enable Kill Button=
-Process=
-Kill Process=
-Kill this Process holding files open=
-Process ID=
-Open=
-May prevent shutdown=
-File Name and Path=
-An entry for bash means you have a terminal session open with the working directory on the array=
-If smbd is listed, it means that another computer has a samba share mounted=
-Files open by Samba usually wont prevent array shutdown=
-No open files=
-Kill=
-Command timed out=
-Cannot get list of open files=
+Enable Kill Button=Aktivovat tlačítko „Ukončit“
+Process=Proces
+Kill Process=Ukončit proces
+Kill this Process holding files open=Ukončit tento proces, který drží soubory otevřené
+Process ID=ID procesu
+Open=Otevřít
+May prevent shutdown=Může zabránit vypnutí
+File Name and Path=Název a cesta souboru
+An entry for bash means you have a terminal session open with the working directory on the array=Záznam „bash“ znamená, že máte otevřenou terminálovou relaci s pracovním adresářem v rámci pole
+If smbd is listed, it means that another computer has a samba share mounted=Záznam „smbd“ znamená, že jiný počítač má připojenou Samba sdílenou složku
+Files open by Samba usually wont prevent array shutdown=Soubory otevřené přes Sambu obvykle nebrání vypnutí pole
+No open files=Žádné otevřené soubory
+Kill=Ukončit
+Command timed out=Časový limit příkazu vypršel
+Cannot get list of open files=Nelze načíst seznam otevřených souborů
 ;
 ; Help
 ;
 :open_files_help_plug:
-> Click on the **Kill** button to stop the process that is holding the files open.
->  A dialog box will open showing you the progress of killing the process holding those files open.
+> Kliknutím na tlačítko **Ukončit** zastavíte proces, který drží soubory otevřené.
+> Otevře se dialogové okno zobrazující průběh ukončování procesu, který tyto soubory drží.
 >
-> Click on **Process**, **Process ID**, **Files That May Prevent Shutdown**, or **File Name and Path** to change the sort order.
+> Kliknutím na **Proces**, **ID procesu**, **Soubory, které mohou bránit vypnutí** nebo **Název a cesta k souboru** změníte způsob řazení.
 :end
+

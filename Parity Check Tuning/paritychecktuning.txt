@@ -4,454 +4,472 @@
 
 ; Parity Check Settings Page
 
-Parity Check Tuning=
-automatic=
-Basic=
-below critical disk temperature threshold=
-below warning disk temperature threshold=
-CAUTION=
-Click to show parity-check history=
-Data Rebuild=
-Debug=
-Disk Clear=
-Donate to plugin author=DONATE
-entry in %s format=
-High disk temperatures can shutdown server=
-Increment frequency=
-Increment pause time=
-Increment resume time=
-No parity check entries found in syslog=
-ParityRead-Check History=Parity/Read-Check History=
-Parity Check=
-Parity Check Tuning logging=
-Parity Sync=
-Pause an array operation at=
-Pause and Resume array operations if disks overheat=
-Read Check=
-Requires unRaid 67 or later=Requires unRaid 6.7 or later=
-Resume an array operation at=
-Resume parity checks on next array start=
-Resume running Array operations on next array start=
-Run %s %s in increments=
-scheduled=
-Send notifications for Pause or Resume of increments=
-Send notifications for temperature related Pause or Resume=
-Shutdown server at=
-Syslog only=
-Syslog and Flash=
-Flash only=
-Testing=
-Unscheduled=
-Use increments for %s %s=
-Use increments for disk Clear operations=
-Use increments for Parity-SyncData Rebuild operations=Use increments for Parity-Sync/Data Rebuild operations
-You require a parity disk present for this option to be relevant=
+Parity Check Tuning=Ladění kontroly parity
+automatic=Automaticky
+Basic=Základní
+below critical disk temperature threshold=pod kritickým teplotním prahem disku
+below warning disk temperature threshold=pod varovným teplotním prahem disku
+CAUTION=POZOR
+Click to show parity-check history=Kliknutím zobrazíte historii kontroly parity
+Data Rebuild=Obnova dat
+Debug=Ladění
+Disk Clear=Vymazání disku
+Donate to plugin author=Přispět autorovi pluginu
+entry in %s format=záznam ve formátu %s
+High disk temperatures can shutdown server=Vysoké teploty disků mohou způsobit vypnutí serveru
+Increment frequency=Frekvence inkrementu
+Increment pause time=Doba pozastavení inkrementu
+Increment resume time=Doba obnovení inkrementu
+No parity check entries found in syslog=V systémovém protokolu nebyly nalezeny žádné záznamy o kontrole parity
+ParityRead-Check History=Historie parity/čtecí kontroly
+Parity Check=Kontrola parity
+Parity Check Tuning logging=Záznamy ladění kontroly parity
+Parity Sync=Synchronizace parity
+Pause an array operation at=Pozastavit operaci pole při
+Pause and Resume array operations if disks overheat=Pozastavit a obnovit operace pole při přehřátí disků
+Read Check=Čtecí kontrola
+Requires unRaid 67 or later=Vyžaduje Unraid 6.7 nebo novější
+Resume an array operation at=Obnovit operaci pole při
+Resume parity checks on next array start=Obnovit kontrolu parity při dalším spuštění pole
+Resume running Array operations on next array start=Obnovit běžící operace pole při dalším spuštění
+Run %s %s in increments=Spustit %s %s po částech
+scheduled=Naplánováno
+Send notifications for Pause or Resume of increments=Odeslat oznámení při pozastavení nebo obnovení inkrementů
+Send notifications for temperature related Pause or Resume=Odeslat oznámení při teplotně řízeném pozastavení nebo obnovení
+Shutdown server at=Vypnout server při
+Syslog only=Pouze systémový protokol
+Syslog and Flash=Systémový protokol a flash
+Flash only=Pouze flash
+Testing=Testování
+Unscheduled=Nenaplánováno
+Use increments for %s %s=Použít inkrementy pro %s %s
+Use increments for disk Clear operations=Použít inkrementy pro vymazání disku
+Use increments for Parity-SyncData Rebuild operations=Použít inkrementy pro synchronizaci parity / obnovu dat
+You require a parity disk present for this option to be relevant=Tato možnost je relevantní pouze pokud je přítomen paritní disk
 
 ; Parity Problems Assistant page
-Parity Problems Assistant=
+
+Parity Problems Assistant=Asistent pro problémy s paritou
+
 ; page intro text
+
 :parityProblems_intro_plug:
-The **Parity Problems Assistant** is part of the **Parity Check Tuning** plugin.<p/>
-The current status is **EXPERIMENTAL** and it is always possible that this assistant may be removed in the future).
-**(feedback is welcomed on the basic concept and ideas for improvement)**.<p/>
-The idea is that this assistant can be used after a parity check or read check has reported problems and logged the details of any problem sectors to the syslog.
-In many cases such errors can be due to external factors such as cabling or the power supply rather than the actual disks.<p/>
-It is also not uncommon, particularly on **Ryzen/ThreadRipper** based systems, to get random parity errors if the RAM is overclocked
-(an XMP profile **is** an overclock),
-and the motherboard/CPU combination may also impose limits that are lower than the RAM is capable of supporting.<p/>
-If you think you have rectified whatever caused the problems to occur then you can use this assistant to run a partial check over a narrow range to see if the problem still occurs.
-This can be much faster than having to run a full parity check or read check to see if you have resolved the issue or to run a disk extended SMART test to test the actual disk.<p/>
-**IMPORTANT**:  This assistant should never be used as an alternative to running a full parity check once you think the problem has been resolved.
+Asistent **problémů s paritou** je součástí pluginu **Parity Check Tuning**.<p/>
+Aktuální stav je **EXPERIMENTÁLNÍ** a je vždy možné, že tento asistent může být v budoucnu odstraněn.
+**(zpětná vazba k základnímu konceptu a nápadům na zlepšení je vítána)**.<p/>
+Myšlenka je taková, že tento asistent může být použit po dokončení kontroly parity nebo kontroly čtení, která nahlásila problémy a zaznamenala podrobnosti o problematických sektorech do systémového logu.
+V mnoha případech mohou být tyto chyby způsobeny vnějšími faktory, jako jsou kabeláž nebo napájení, nikoliv samotnými disky.<p/>
+Není také neobvyklé, zejména u systémů založených na procesorech **Ryzen/ThreadRipper**, že se při přetaktování RAM (profil XMP **je** přetaktování),
+a kombinace základní desky a CPU může nastavovat limity, které jsou nižší než schopnosti RAM.<p/>
+Pokud si myslíte, že jste odstranili příčinu problémů, můžete použít tohoto asistenta k provedení částečné kontroly na úzkém rozsahu, abyste zjistili, zda problém stále přetrvává.
+To může být mnohem rychlejší než kompletní kontrola parity nebo kontrola čtení, případně rozšířený SMART test disku.<p/>
+**DŮLEŽITÉ**: Tento asistent nikdy nesmí být použit jako náhrada za kompletní kontrolu parity, pokud si myslíte, že problém byl vyřešen.
 :end
+
+
 ; fields
-Click to show Error Sectors from syslog=
-End point for check=
-Method used to specify start and stop points=
-Only read checks can be performed=
-percent=
-Percentage=
-sector=
-Sector Numbers=
-Show Sector Numbers=
-Start Check=
-Start point for check=
-Write Corrections to Parity=
+
+Click to show Error Sectors from syslog=Kliknutím zobrazíte chybné sektory ze systémového protokolu
+End point for check=Koncový bod kontroly
+Method used to specify start and stop points=Způsob určení počátečního a koncového bodu
+Only read checks can be performed=Lze provádět pouze čtecí kontroly
+percent=procento
+Percentage=Procento
+sector=sektor
+Sector Numbers=Čísla sektorů
+Show Sector Numbers=Zobrazit čísla sektorů
+Start Check=Spustit kontrolu
+Start point for check=Počáteční bod kontroly
+Write Corrections to Parity=Zapsat opravy do parity
 
 ; PHP file messages
 
-Analyze results from an array operation=
-Array being shutdown due to drive overheating=
-Array operation will not be restarted=
-Array operation restarted=
-Array shutdown=
-Cancel a running parity check=
-Correcting=
-Detected a change to the disk configuration=
-Drives cooled down=
-Elapsed Time=
-ERROR=
-Following drives overheated=
-IMPORTANT=
-Increments=
-Non-Correcting=
-Pause a running array operation=
-Resume a paused array operation=
-Sent notification=
-Show the status of a running parity check=
-Shutdown=
-Start a correcting parity check=
-Start a correcting parity check=
-Start a parity check with scheduled settings=
-Starting Shutdown=
-Unclean shutdown detected=
-Unknown action=
-Unrecognized option=
-Usage=
-where action is one of=
+Analyze results from an array operation=Analyzovat výsledky operace pole
+Array being shutdown due to drive overheating=Pole se vypíná kvůli přehřátí disku
+Array operation will not be restarted=Operace pole nebude znovu spuštěna
+Array operation restarted=Operace pole byla znovu spuštěna
+Array shutdown=Pole vypnuto
+Cancel a running parity check=Zrušit probíhající kontrolu parity
+Correcting=Korigující
+Detected a change to the disk configuration=Byla zjištěna změna konfigurace disků
+Drives cooled down=Disky se ochladily
+Elapsed Time=Uplynulý čas
+ERROR=CHYBA
+Following drives overheated=Následující disky se přehřály
+IMPORTANT=DŮLEŽITÉ
+Increments=Inkrementy
+Non-Correcting=Nekorigující
+Pause a running array operation=Pozastavit probíhající operaci pole
+Resume a paused array operation=Obnovit pozastavenou operaci pole
+Sent notification=Odesláno oznámení
+Show the status of a running parity check=Zobrazit stav probíhající kontroly parity
+Shutdown=Vypnutí
+Start a correcting parity check=Spustit korigující kontrolu parity
+Start a parity check with scheduled settings=Spustit kontrolu parity s naplánovanými nastaveními
+Starting Shutdown=Zahájeno vypínání
+Unclean shutdown detected=Zjištěno nečisté vypnutí
+Unknown action=Neznámá akce
+Unrecognized option=Neznámá možnost
+Usage=Použití
+where action is one of=kde akce je jedna z následujících
 
 ; Notifications
 
-aborted due to Unclean shutdown=
-array stopping so progress will be lost=
+aborted due to Unclean shutdown=Zrušeno kvůli nečistému vypnutí
+array stopping so progress will be lost=Pole se zastavuje, průběh bude ztracen
+
 ; The type of array operation (parity check, clear, rebuild) will be appended to the following text
-Automatic unRaid=
-Average Speed=
-completed=
-Correcting Parity Check=
-Drives cooled down=
-errors=
-finished=
-Increments=
-NonCorrecting Parity Check=Non-Correcting Parity Check
-Pause=
-Paused=
-Resume=
-Resumed=
-Runtime=
-Scheduled pause=
-Unclean shutdown detected=
-will be started=
+
+Automatic unRaid=Automatické unRaid
+Average Speed=Průměrná rychlost
+completed=Dokončeno
+Correcting Parity Check=Korigující kontrola parity
+Drives cooled down=Disky se ochladily
+errors=chyby
+finished=Ukončeno
+Increments=Inkrementy
+NonCorrecting Parity Check=Nekorigující kontrola parity
+Pause=Pozastavit
+Paused=Pozastaveno
+Resume=Obnovit
+Resumed=Obnoveno
+Runtime=Čas běhu
+Scheduled pause=Naplánovaná pauza
+Unclean shutdown detected=Zjištěno nečisté vypnutí
+will be started=bude spuštěno
 
 ; Swal warnings
 
-A crontab entry should have 5 space-separated values defining the minutes, hour, day of the month, month, day of the week=
-At the moment there is no mechanism to stop this file from growing forever so it is up to you to manage this manually=
-Are you sure you have not got these the wrong way around=
-Before you can set this option to Yes you must first have enabled system notifications=
-Click on the crontab link to get more details on valid formats=
-Debug mode can generate frequent additional log entries in the syslog file so do not leave debug mode active if you are not interested in this information=
-Debug mode is intended to give users a feel for when the plugin is active=
-Do not leave this active if you are not interested in this information=
-Do you really want Debug logging mode=
-Do you really want Testing logging mode=
-Do you really want to log to the flash drive=
-Do you really want this=
-Error in custom entry=
-extra time that will elapse before the system is once again in a protected state=
-Logging to the flash drive can cause a lot additional writes thus potentially shortening its lifetime=
-Notifications not enabled=
-On most systems a disk Clear operation does not adversely affect performance so typically this option is left disabled=
-Only enable this option if the operation is adversely affecting system use and you are not worried about the extra time that will elapse before the system is once again in a protected state=
-Pause and Resume times=
-Pausing a disk Clear operation extends the time before the disk is successfully added to the array and becomes ready for formatting and then used for data storage=
-Pausing an operation that is building parity or rebuilding a failed disk has a level of risk as your array is not back in a protected state until=
-Temperature Pause and Resume=
-Testing mode is normally only used by the plugin author or when gathering evidence of a suspected bug in the plugin=
-Testing mode is very verbose and generates a lot of additional log entries so you do not want it enabled unless this is really necessary=
-The Pause and Resume times would give an increment length of more than 12 hours which is unusual=
-The Resume value must be greater than the Pause one for the heat related Pause and Resume to work correctly as they are both subtracted from the disk temperature warning value when calculating the desired temperature=
-The value you have specified seems unusually large as it is not an absolute value but is relative to the value specified for the drives Temperature Warning level at the unRaid level=
-This might affect array integrity=
-Unusually large value=
+A crontab entry should have 5 space-separated values defining the minutes, hour, day of the month, month, day of the week=Záznam v crontabu musí obsahovat 5 mezerami oddělených hodnot: minuty, hodinu, den v měsíci, měsíc a den v týdnu
+At the moment there is no mechanism to stop this file from growing forever so it is up to you to manage this manually=Momentálně neexistuje mechanismus, který by zastavil nekonečný růst tohoto souboru – je třeba jej spravovat ručně
+Are you sure you have not got these the wrong way around=Jsi si jistý, že to nemáš obráceně?
+Before you can set this option to Yes you must first have enabled system notifications=Před nastavením této volby na „Ano“ musíš nejprve povolit systémová oznámení
+Click on the crontab link to get more details on valid formats=Klikni na odkaz crontab pro více informací o platných formátech
+Debug mode can generate frequent additional log entries in the syslog file so do not leave debug mode active if you are not interested in this information=Režim ladění může často zapisovat další záznamy do systémového logu – nenechávej ho aktivní, pokud tyto informace nechceš
+Debug mode is intended to give users a feel for when the plugin is active=Režim ladění pomáhá uživatelům zjistit, kdy je plugin aktivní
+Do not leave this active if you are not interested in this information=Nenechávej tuto možnost aktivní, pokud tě tyto informace nezajímají
+Do you really want Debug logging mode=Opravdu chceš zapnout režim ladicího logování?
+Do you really want Testing logging mode=Opravdu chceš zapnout režim testovacího logování?
+Do you really want to log to the flash drive=Opravdu chceš zapisovat logy na flash disk?
+Do you really want this=Opravdu to chceš?
+Error in custom entry=Chyba v uživatelském záznamu
+extra time that will elapse before the system is once again in a protected state=dodatečný čas, než bude systém opět v chráněném stavu
+Logging to the flash drive can cause a lot additional writes thus potentially shortening its lifetime=Zapisování logů na flash disk může způsobit velké množství zápisů a tím zkrátit jeho životnost
+Notifications not enabled=Oznámení nejsou aktivní
+On most systems a disk Clear operation does not adversely affect performance so typically this option is left disabled=Na většině systémů nemá vymazání disku negativní dopad na výkon – tato volba zůstává obvykle vypnutá
+Only enable this option if the operation is adversely affecting system use and you are not worried about the extra time that will elapse before the system is once again in a protected state=Aktivuj tuto volbu jen pokud operace negativně ovlivňuje použití systému a nevadí ti delší doba nechráněného stavu
+Pause and Resume times=Časy pozastavení a obnovení
+Pausing a disk Clear operation extends the time before the disk is successfully added to the array and becomes ready for formatting and then used for data storage=Pozastavení operace vymazání disku prodlouží dobu, než bude disk přidán do pole a připraven pro formátování a použití
+Pausing an operation that is building parity or rebuilding a failed disk has a level of risk as your array is not back in a protected state until=Pozastavení operace budování parity nebo obnovy disku nese riziko – pole nebude znovu chráněné, dokud operace neskončí
+Temperature Pause and Resume=Pozastavení a obnovení kvůli teplotě
+Testing mode is normally only used by the plugin author or when gathering evidence of a suspected bug in the plugin=Testovací režim je obvykle používán pouze autorem pluginu nebo při hledání chyb
+Testing mode is very verbose and generates a lot of additional log entries so you do not want it enabled unless this is really necessary=Testovací režim je velmi výřečný a generuje mnoho záznamů – používej jej jen v případě potřeby
+The Pause and Resume times would give an increment length of more than 12 hours which is unusual=Zadané časy odpovídají inkrementu přes 12 hodin – to je neobvyklé
+The Resume value must be greater than the Pause one for the heat related Pause and Resume to work correctly as they are both subtracted from the disk temperature warning value when calculating the desired temperature=Hodnota obnovení musí být vyšší než hodnota pozastavení, aby teplotní logika fungovala správně – obě hodnoty se odečítají od výstražné teploty disku
+The value you have specified seems unusually large as it is not an absolute value but is relative to the value specified for the drives Temperature Warning level at the unRaid level=Zadaná hodnota se zdá příliš vysoká – nejde o absolutní hodnotu, ale o relativní vůči výstražné teplotě disku nastavené v Unraid
+This might affect array integrity=To může ovlivnit integritu pole
+Unusually large value=Neobvykle vysoká hodnota
 
 ; Syslog messages (with debug logging disabled)
 
-%s Cancelled=
-Array not started so no action taken=
-as drives now cooled down=
-Following drives overheated=
-Only able to start a Read-Check due to number of disabled drives=
+%s Cancelled=%s zrušeno
+Array not started so no action taken=Pole nebylo spuštěno, žádná akce neprovedena
+as drives now cooled down=protože disky se nyní ochladily
+Following drives overheated=Následující disky se přehřály
+Only able to start a Read-Check due to number of disabled drives=Lze spustit pouze čtecí kontrolu kvůli počtu deaktivovaných disků
 
 ; Syslog messages (with debug logging enabled)
 ; (probably not worth translating these as they are mainly of use to the plugin developer)
 
-appears to be a regular scheduled check=
-%s cancel request sent %s=
-already running=
-array drives=
-Array operation paused but drives not cooled enough to resume=
-Array operation paused but not for temperature related reason=
-Array stopping=
-Array stopping while %s was in progress %s=
-but no action currently taken on started event=
-but no parity check was in progress when array stopped=
-Cancel request=
-cool=
-created cron entries for running increments=
-created cron entry for monitoring disk temperatures=
-Detected that array has not yet been started=
-Detected that array has just been started=
-detected that mdcmd had been called from %s with command %s=
-ERROR=
-hot=
-Loading progress file %s=
-No action specified=
-No array operation currently in progress=
-No cron events for this plugin are needed=
-No drives appear to have reached shutdown threshold=
-Not allowed as %s already running=
-Option not currently recognized=
-Parity check appears to be paused=
-Parity Check was in progress when array stopped at %s=
-Pause of=
-Pause request=
-Removed existing state file %s=
-Resume request=
-so no further action to take=
-Temperature monitoring switched off=
-Unscheduled array operation in progress=
-using scheduled mode of %s=
-warm=
-with all array drives below temperature threshold for a Pause=
+appears to be a regular scheduled check=Zdá se, že jde o pravidelně naplánovanou kontrolu
+%s cancel request sent %s=Požadavek na zrušení %s odeslán %s
+already running=Již běží
+array drives=Disky pole
+Array operation paused but drives not cooled enough to resume=Operace pole byla pozastavena, ale disky nejsou dostatečně ochlazeny pro pokračování
+Array operation paused but not for temperature related reason=Operace pole byla pozastavena, ale ne z důvodu teploty
+Array stopping=Pole se zastavuje
+Array stopping while %s was in progress %s=Pole se zastavuje během probíhající operace %s %s
+but no action currently taken on started event=Ale aktuálně nebyla provedena žádná akce po spuštění
+but no parity check was in progress when array stopped=Při zastavení pole neprobíhala žádná kontrola parity
+Cancel request=Požadavek na zrušení
+cool=Chladno
+created cron entries for running increments=Vytvořeny cron záznamy pro běžící inkrementy
+created cron entry for monitoring disk temperatures=Vytvořen cron záznam pro sledování teplot disků
+Detected that array has not yet been started=Zjištěno, že pole ještě nebylo spuštěno
+Detected that array has just been started=Zjištěno, že pole bylo právě spuštěno
+detected that mdcmd had been called from %s with command %s=Zjištěno, že mdcmd byl zavolán z %s s příkazem %s
+ERROR=CHYBA
+hot=Horko
+Loading progress file %s=Načítání souboru s průběhem %s
+No action specified=Nezadána žádná akce
+No array operation currently in progress=Aktuálně neprobíhá žádná operace pole
+No cron events for this plugin are needed=Pro tento plugin nejsou potřebné žádné cron události
+No drives appear to have reached shutdown threshold=Žádný disk nedosáhl prahu pro vypnutí
+Not allowed as %s already running=Nelze provést, protože %s již běží
+Option not currently recognized=Neznámá volba
+Parity check appears to be paused=Zdá se, že kontrola parity je pozastavena
+Parity Check was in progress when array stopped at %s=Kontrola parity probíhala, když se pole zastavilo v %s
+Pause of=Pozastavení:
+Pause request=Požadavek na pozastavení
+Removed existing state file %s=Odstraněn existující soubor se stavem %s
+Resume request=Požadavek na obnovení
+so no further action to take=Není třeba žádné další akce
+Temperature monitoring switched off=Sledování teploty bylo vypnuto
+Unscheduled array operation in progress=Probíhá neplánovaná operace pole
+using scheduled mode of %s=Používání naplánovaného režimu %s
+warm=Teplo
+with all array drives below temperature threshold for a Pause=všechny disky pole jsou pod teplotním prahem pro pozastavení
 
 ; Syslog messages (with testing logging enabled)
 ; (almost certainly not worth translating these as they are mainly of use to the plugin developer)
 
-analyze previous progress before starting new one=
-Array not started so no action taken=
-Drive %s%s appears to be critical=
-Plugin temperature settings=
-shutdown %s=
-Shutdown not actioned as running in TESTING mode=
-updated cron settings are in %s=
+analyze previous progress before starting new one=Analyzovat předchozí průběh před zahájením nového
+Array not started so no action taken=Pole nebylo spuštěno, žádná akce neprovedena
+Drive %s%s appears to be critical=Disk %s%s se jeví jako kritický
+Plugin temperature settings=Nastavení teploty pluginu
+shutdown %s=%s vypnout
+Shutdown not actioned as running in TESTING mode=Vypnutí neprovedeno, protože běží TESTOVACÍ režim
+updated cron settings are in %s=Aktualizovaná cron nastavení jsou v %s
 
 ; PART 2 - TEXT Blocks ant HELP text
 
-End point for check=
-Method used to specify start and stop points=
+End point for check=Koncový bod kontroly
+Method used to specify start and stop points=Způsob určení počátečního a koncového bodu
 
 ; Help text on settings page
 ; These could perhaps be left in English to keep translation task easier)
 
 :parity_tune_explain_plug:
-> The main purpose of this plugin is to allow you to limit array operations such as parity checks to running at times that will not inconvenience you.
+> Hlavním účelem tohoto pluginu je umožnit vám omezit provoz operací pole, jako jsou kontroly parity, tak, aby probíhaly v době, kdy vás to nebude rušit.
 >
->If you have set this to **No** then you get the default system behavior of parity checks running without a break to completion unless you manually stop/pause/cancel them.
+> Pokud máte nastaveno na **Ne**, pak získáte výchozí chování systému, kdy kontroly parity běží nepřetržitě do dokončení, pokud je ručně nezastavíte/pozastavíte/zrušíte.
 >
->Setting this option to **Yes** specifies that parity checks should be run in increments spread over several days.
-> As an example of what this plugin can do assume
->You have a parity check you have scheduled to start on the first of every month at midnight
->* Your past experience has shown that if the parity check runs uninterrupted it takes 30 hours to complete.
->* You set this plugin to use 3 hour increments starting at midnight and finishing at 3.00 A.M.
->* The parity check will now actually take 10 days elapsed time (10 x 3 = 30) so the parity check will complete on 10th of the month.
->* You have scheduled these increments to run starting at midnight and finishing at 3:00 A.M. when you know the system is not being used.
->* You are not worried about this increased elapsed time and will welcome the increased system responsiveness during normal use.
->* The rest of the month this plugin will do nothing as there is no active parity check in progress when the start time for an increment comes around.
+> Nastavení této volby na **Ano** určuje, že kontroly parity by měly být spuštěny po částečných blocích rozložených do několika dní.
+> Jako příklad toho, co tento plugin dokáže, si představte:
+> Máte kontrolu parity naplánovanou na začátek každého měsíce o půlnoci
+> * Vaše předchozí zkušenosti ukazují, že pokud kontrola parity běží nepřetržitě, trvá dokončení 30 hodin.
+> * Nastavíte tento plugin tak, aby používal 3hodinové úseky začínající o půlnoci a končící ve 3:00 ráno.
+> * Kontrola parity tak ve skutečnosti zabere 10 kalendářních dnů (10 x 3 = 30), takže se dokončí 10. dne v měsíci.
+> * Naplánovali jste tyto úseky tak, aby běžely od půlnoci do 3:00 ráno, kdy víte, že systém není používán.
+> * Nevadí vám toto prodloužení doby dokončení a naopak oceníte lepší odezvu systému při běžném používání.
+> * Po zbytek měsíce plugin nebude nic dělat, protože při spuštění dalšího úseku nebude aktivní žádná kontrola parity.
 >
->**CAUTION:**  If the array is stopped while an array operation is incomplete then the progress so far is lost and it can only be restarted from the beginning
+> **UPOZORNĚNÍ:** Pokud je pole zastaveno během nedokončené operace pole, dosavadní průběh se ztratí a operaci lze restartovat pouze od začátku.
 :end
+
 
 :parity_tune_increments_plug:
->Setting this option to **Yes** specifies that parity checks should be run in increments spread over several days.
+> Nastavení této volby na **Ano** určuje, že kontroly parity by měly být spuštěny po částečných blocích rozložených do několika dní.
 >
->If you have set this to **No** then you get the default system behavior of parity checks running without a break to completion unless you manually stop/pause/cancel them.
+> Pokud máte nastaveno na **Ne**, pak získáte výchozí chování systému, kdy kontroly parity běží nepřetržitě do dokončení, pokud je ručně nezastavíte/pozastavíte/zrušíte.
 >
->**CAUTION:**  The default unRaid behavior is that if the array is stopped while an array operation is incomplete then the progress so far is lost and it can only be restarted from the beginning.
+> **UPOZORNĚNÍ:** Výchozí chování unRaid je takové, že pokud je pole zastaveno během nedokončené operace pole, dosavadní průběh se ztratí a operaci lze restartovat pouze od začátku.
 :end
 
+
 :parity_tune_frequency_plug:
-> The frequency at which parity check increments should be run.<br><br>In normal operation it is expected that the <strong>Daily</strong> option will be the one that most users will want to use so this is the default.   To support any user looking for other frequencies there is the option to set up <strong>Custom</strong> schedules which will allow for more complicated schedules for the Pause and Resume times.  When you use this option you are given the option to specify the time as used by the Linux <a href="https://en.wikipedia.org/wiki/Cron#Overview"  target="_blank">crontab</a> utility
+> Frekvence, jak často by měly být spouštěny inkrementy kontroly parity.<br><br>V běžném provozu se očekává, že většina uživatelů bude chtít použít volbu <strong>Denně</strong>, proto je to výchozí nastavení.  Pro uživatele, kteří chtějí jiné frekvence, je zde možnost nastavit <strong>Vlastní</strong> rozvrhy, které umožní složitější plánování časů pozastavení a obnovení. Při použití této volby máte možnost zadat čas v podobě, jakou používá linuxový nástroj <a href="https://en.wikipedia.org/wiki/Cron#Overview" target="_blank">crontab</a>.
 :end
+
 
 :parity_tune_manual_plug:
-> Should parity checks that are started manually also be run in increments?
+> Měly by být kontroly parity spuštěné ručně také prováděny po inkrementálních blocích?
 >
-> It is quite likely that you will want such a check to run to completion without interruption and if so leave this option set to **No**.
-> With this option set to **Yes** then if you manually start a Parity Check from the Main page and then manually Pause the check, this will result in the check being run in increments between the scheduled times until the Parity Check completes.
+> Je velmi pravděpodobné, že budete chtít takovou kontrolu nechat dokončit bez přerušení, takže tuto volbu nechte nastavenou na **Ne**.
+> Pokud ji nastavíte na **Ano**, pak pokud ručně spustíte kontrolu parity z hlavní stránky a pak ji manuálně pozastavíte, bude kontrola následně pokračovat po inkrementálních blocích během naplánovaných časů, dokud nebude dokončena.
 :end
+
 
 :parity_tune_automatic_plug:
-> if the unRaid system is not shutdown cleanly then the next time the array is started unRaid will automatically start a non-correcting parity check (or a read check if you have no parity disk). This can happen for a wide variety of reasons ranging from power loss; hardware issues; and software issues.  The automatic check is run because if there are any parity errors this can compromise the ability to recover from an array drive failure at a later date so you want to get back to having valid parity as soon as is practical.
+> Pokud systém unRaid nebyl korektně vypnut, při dalším spuštění pole unRaid automaticky spustí nekorigující kontrolu parity (nebo kontrolu čtení, pokud nemáte disk parity). To může nastat z různých důvodů, jako je výpadek napájení, hardwarové problémy nebo softwarové chyby. Automatická kontrola se spouští, protože pokud jsou nějaké chyby parity, může to ohrozit schopnost obnovy při selhání disku, a proto chcete co nejdříve získat platnou paritu.
 >
-> If this option is set then the check will be allowed to run for a few minutes (as any errors after an unclean shutdown are most likely to be at the start of the disks as they were not unmounted cleanly) and then automatically put the check into a paused state (if outside the time specified for running increments) and then the  remainder of the check subsequently run in increments according to the time slots specified for running increments.
+> Pokud je tato volba povolena, kontrola poběží pár minut (chyby po nekorektním vypnutí jsou nejčastěji na začátku disků, protože nebyly správně odpojeny), poté se automaticky pozastaví (pokud je mimo čas pro inkrementy) a zbytek kontroly poběží inkrementálně podle nastavených časových úseků.
 :end
 
-:parity_tune_frequency_plug:
-> The frequency at which parity check increments should be run.
->
->In normal operation it is expected that the **Daily** option will be the one that most users will want to use so this is the default.   To support any user looking for other frequencies there is the option to set up **Custom** schedules which will allow for more complicated schedules for the Pause and Resume times.  When you use this option you are given the option to specify the time as used by the Linux <a href="https://en.wikipedia.org/wiki/Cron#Overview"  target="_blank">crontab</a> utility.
-:end
 
 :parity_tune_resume_plug:
-> The time at which a paused parity check should be resumed.<br>If no parity check is currently paused when this time comes around then no action will be taken.
+> Čas, kdy by měla být pozastavená kontrola parity obnovena.<br>Pokud v daný čas není žádná kontrola parity pozastavena, nebude provedena žádná akce.
 >
->Typically this time would be set to be the start of an idle period overnight.   An appropriate value might be to use the same time that you have specified for a scheduled parity check to start.
+>Obvykle se tento čas nastavuje na začátek doby nečinnosti přes noc. Vhodnou hodnotou může být stejný čas, který máte nastavený pro plánovaný start kontroly parity.
 >
->If the increment period has been set to **Custom** then the hours/minutes fields are hidden and you are instead given the option to set the time in <a href="https://en.wikipedia.org/wiki/Cron#Overview"  target="_blank">crontab</a> format.
+>Pokud je nastaven inkrementální režim na **Vlastní**, pak jsou pole pro hodiny/minuty skryta a místo nich je možné zadat čas ve formátu <a href="https://en.wikipedia.org/wiki/Cron#Overview" target="_blank">crontab</a>.
 :end
+
 
 :parity_tune_pause_plug:
-> The time at which a running parity check should be paused. Typically, this would be set to be a time when you want other activity to not be affected by a running parity check.
->If no parity check is actively running when this time comes around then no action will be.
+> Čas, kdy by měla být běžící kontrola parity pozastavena. Obvykle by měl být nastaven na dobu, kdy chcete, aby jiné aktivity nebyly ovlivněny probíhající kontrolou parity.
+> Pokud v daný čas žádná kontrola parity neběží, nebude provedena žádná akce.
 >
->Normally you want to make sure that this time is set to be after the time that you schedule regular parity checks to run.  The first increment will then be from when the regular parity check is scheduled to start up to the time you have specified for the increment to end.
+> Obvykle chcete zajistit, aby byl tento čas nastaven až po čase, kdy spouštíte pravidelné kontroly parity. První inkrement pak poběží od plánovaného startu pravidelné kontroly až do času, který jste nastavili jako konec inkrementu.
 >
->If the increment period has been set to **Custom** then the hours/minutes fields are hidden and you are instead given the option to set the time in <a href="https://en.wikipedia.org/wiki/Cron#Overview"  target="_blank">crontab</a> format.
+> Pokud je nastaven inkrementální režim na **Vlastní**, pak jsou pole pro hodiny/minuty skryta a místo nich máte možnost zadat čas ve formátu <a href="https://en.wikipedia.org/wiki/Cron#Overview" target="_blank">crontab</a>.
 >
->You also want to make sure that the time allocated to running increments is sufficient to expect the parity check to run to completion before the next check is scheduled to start.   Since most people only schedule parity checks to run infrequently (e.g. Monthly or Quarterly) then this is unlikely to be an issue but it is something to take into consideration.
+> Také chcete zajistit, aby čas vyhrazený pro inkrementy byl dostatečný k tomu, aby kontrola parity mohla být dokončena před dalším plánovaným spuštěním. Vzhledem k tomu, že většina lidí plánuje kontroly parity jen zřídka (např. měsíčně nebo čtvrtletně), pravděpodobně to nebude problém, ale je to něco, co byste měli zvážit.
 :end
+
 
 :parity_tune_notify_plug:
-> Setting this option to <strong>Yes</strong> means that you will be sent a notification every time the plugin Pauses or Resumes an array operation.
->If you would rather not get such notifications then leave this option set to **No**.
->The notification is sent as a **Notice** category message to the targets specified under *<a href="Settings/Notifications">Settings->Notification Settings</a>*.
+> Nastavení této volby na <strong>Ano</strong> znamená, že budete dostávat oznámení pokaždé, když plugin pozastaví nebo obnoví operaci na poli.
+> Pokud taková oznámení nechcete dostávat, nechte volbu nastavenou na **Ne**.
+> Oznámení je odesíláno jako zpráva kategorie **Upozornění (Notice)** na cíle nastavené v *<a href="Settings/Notifications">Nastavení->Nastavení oznámení</a>*.
 :end
 
+
 :parity_tune_allops_plug:
-> Should operations that involve building new parity or rebuilding a failed disk be run using increments?
+> Měly by být operace, které zahrnují vytváření nové parity nebo přestavbu selhaného disku, prováděny inkrementálně?
 >
->This type of check will only be run if there is potentially some issue with your array and action is being taken to get it back into a protected state.
+> Tento typ kontroly poběží pouze v případě, že existuje nějaký potenciální problém s vaším polem a je třeba ho dostat zpět do chráněného stavu.
 >
->**IMPORTANT**: Until this operation completes your array is not fully protected so it is assumed that most people will want this option left at **No**.
-> Do not select **Yes** unless you are absolutely certain that is what you want.
+> **DŮLEŽITÉ**: Dokud tato operace není dokončena, vaše pole není plně chráněno, proto se předpokládá, že většina uživatelů nechá tuto volbu nastavenou na **Ne**.
+> Nevolte **Ano**, pokud si nejste absolutně jisti, že to tak chcete.
 :end
 
 
 :parity_tune_clear_plug:
-> Should disk Clear operations be run using increments.<br><br>A disk Clear operation occurs when you add a new drive (that has not been pre-cleared (using the Pre-Clear plugin) to an array that is parity protected.  The Clear process writes zeroes to every sector on the new disk so that it can be added to the array without affecting the existing parity. Until the Clear operation has completed you are not able to format the disk in unRaid and start using it for storing data.
+> Měly by být operace vymazání disku prováděny inkrementálně?<br><br>Operace vymazání disku nastane, když přidáte nový disk (který nebyl předvymazán pomocí pluginu Pre-Clear) do pole chráněného paritou. Proces vymazání zapíše na každý sektor disku nuly, aby mohl být disk přidán do pole bez ovlivnění stávající parity. Dokud není vymazání dokončeno, nelze disk v unRaid naformátovat a používat k ukládání dat.
 >
->Since until the Clear operation completes the disk will not be available for use it is likely that most people will want this option left at **No**.   In addition, a Clear operation tends not to put much of a load on the system so is less likely to impact performance in normal daily use.
+> Vzhledem k tomu, že disk není dostupný k použití, dokud není operace vymazání dokončena, většina uživatelů pravděpodobně nechá tuto volbu nastavenou na **Ne**. Navíc, operace vymazání obvykle nezatěžuje systém příliš, takže nemá velký dopad na výkon během běžného denního provozu.
 :end
+
 
 :parity_tune_restart_plug:
-> Unraid will normally abandon a parity check if the system is shutdown, rebooted  or the array is stopped (with the only option being to restart the parity check from the beginning).
-> Setting this option allows parity checks to be restarted by this plugin from the point they had reached as long as the following criteria are met:
->* The array was shutdown tidily
->* The user must not have made any changes to the array configuration.
+> Unraid běžně zruší kontrolu parity, pokud dojde k vypnutí, restartu systému nebo zastavení arraye (a jedinou možností je znovu spustit kontrolu parity od začátku).
+> Nastavení této volby umožňuje tomuto pluginu znovu spustit kontrolu parity od bodu, kde byla přerušena, pokud jsou splněna následující kritéria:
+>* Pole bylo korektně vypnuto
+>* Uživatel neprovedl žádné změny v konfiguraci pole
 >
->As long as these criteria are met then when the array is next started the operation is resumed from the point previously reached.
+> Pokud jsou tato kritéria splněna, pak se operace při příštím spuštění pole obnoví z předchozího bodu.
 >
->**NOTES:**
->* If the array operation was within the time set for a scheduled increment to be running then on restarting the array operation it will be set to be paused if now outside the time set for running increments.
->* If the array operation was manually paused then the restarted array operation will also be paused
->* If you want to use this feature by simply stopping the array without immediately using the **Reboot** or **Shutdown** buttons then you first need to manually **Pause** the array operation before using the **Stop** button.  If you to this and successfully stop the array then the array operation will now be resumed if you simply **Start** the array again, and also on the next array start after **Reboot** or **Shutdown**.
+> **POZNÁMKY:**
+>* Pokud operace na arrayi probíhala v čase, kdy měl běžet naplánovaný inkrement, pak po restartu pole bude operace pozastavena, pokud se již nacházíte mimo nastavený časový rámec pro inkrementy.
+>* Pokud byla operace na poli ručně pozastavena, pak bude i po obnovení spuštěna jako pozastavená.
+>* Pokud chcete tuto funkci využívat tak, že pole pouze zastavíte (bez okamžitého kliknutí na **Reboot** nebo **Shutdown**), musíte nejprve ručně **Pozastavit** operaci pole a teprve pak použít tlačítko **Stop**. Pokud pole úspěšně zastavíte tímto způsobem, pak se operace automaticky obnoví buď při opětovném spuštění pole, nebo i po restartu či vypnutí.
 :end
+
 
 :parity_tune_hot_plug:
-> Pause an array operation(Parity Check, Parity-Sync/Disk Rebuild, disk Clear)if the disk temperatures exceeds the limits you have set.
+> Pozastaví operaci pole (Kontrola parity, Parity-Sync / Obnova disku, Vymazání disku), pokud teplota některého z disků překročí vámi nastavené limity.
 >
->The temperatures are checked against the thresholds set for the Warning disk temperature levels. If a threshold has been defined for an individual drive (accessed by clicking on the drive in the Main tab) then this is the value used.  If not the global setting (set via *Settings->Display Settings*) will be used.  It is assumed that normally you would want the array operation to be paused before the value set at the unRaid level as the Warning Threshold.
+> Teploty se porovnávají s prahovými hodnotami nastavenými pro výstražnou teplotu disku. Pokud je pro jednotlivý disk nastavena konkrétní hranice (přes kliknutí na disk v záložce Hlavní), použije se tato hodnota. Jinak se použije globální nastavení (nastavené v *Nastavení->Zobrazení*). Předpokládá se, že si přejete, aby byla operace pole pozastavena dříve, než Unraid odešle varování o dosažení teplotního limitu.
 >
->A much better solution is to improve the cooling in your case so that the disks never overheat.   In practice this may not always prove practical.
+> Mnohem lepším řešením je zlepšit chlazení ve vaší skříni, aby se disky nikdy nepřehřívaly. V praxi to ale nemusí být vždy možné.
 >
->If the array operation was part of running an increment then it will not be resumed outside the time allotted for the increment.   If the array operation was initiated for any other reason then the Pause/Resume behavior on temperature is always active.
+> Pokud byla operace součástí naplánovaného inkrementu, nebude obnovena mimo čas vyhrazený pro tento inkrement. Pokud byla operace spuštěna jiným způsobem, pak je chování Pozastavit/Obnovit na základě teploty vždy aktivní.
 :end
+
 
 :parity_tune_warn_plug:
-> This value indicates how close to the value set for the Warning Disk Temperature Threshold a disks temperature is allowed to reach before a **pause** of a running array operation is triggered. If an explicit threshold has been defined for an individual drive then this is the value used.  If not the global setting will be used.
+> Tato hodnota určuje, jak blízko k hodnotě nastavené jako Výstražná Teplota disku může teplota disku dosáhnout, než dojde k **pozastavení** běžící operace pole. Pokud je nastavena konkrétní mezní hodnota pro daný disk, použije se tato hodnota. Jinak se použije globální nastavení.
 >
-> You normally want a small positive value to trigger the pause before Unraid gets around to sending you a notification that the temperature warning threshold has been reached for a disk.
+> Obvykle chcete nastavit malé kladné číslo, aby došlo k pozastavení ještě předtím, než Unraid pošle varování, že byla dosažena výstražná teplota.
 >
-> As an example if the Warning threshold for a drive is 50C then setting a pause value of 5 would cause the plugin to pause the operation if that drive reached 45C (50-5).
+> Například pokud je výstražný limit pro disk 50 °C a nastavíte hodnotu pro pozastavení na 5, pak plugin pozastaví operaci, pokud disk dosáhne 45 °C (50-5).
 >
->If there is no active array operation then no action will be taken even if disk temperatures exceed the specified threshold.
+> Pokud žádná operace pole neprobíhá, nebude provedena žádná akce, i kdyby byly teploty disků nad limitem.
 >
-> If there is no running array operation then no action will be taken.
+> Pokud žádná operace pole neběží, nebude provedena žádná akce.
 :end
+
 
 :parity_tune_low_plug:
-> This value indicates how much below the Warning temperature threshold of a drive must reach before a **resume** of an array operation is issued.
+> Tato hodnota určuje, o kolik musí teplota disku klesnout pod výstražný práh, než dojde k **obnovení** operace pole.
 >
->You need to get a good balance between array operations being resumed too soon (and thus quickly reaching the level to initiate another pause) and wasting a lot of time.
+> Je třeba najít rovnováhu mezi příliš brzkým obnovením operace (kdy teplota rychle opět stoupne a vyvolá další pozastavení) a zbytečnou ztrátou času.
 >
->If a disk ever gets spun down the temperature is not readily available so it will be assumed that this criteria has been met
+> Pokud je disk v režimu spánku, teplota není snadno dostupná – v takovém případě se předpokládá, že toto kritérium bylo splněno.
 >
->If there is no paused array operation then no action will be taken.
+> Pokud neprobíhá žádná pozastavená operace pole, nebude provedena žádná akce.
 :end
+
 
 :parity_tune_temp_notify_plug:
-> Setting this option to **Yes** means that you will be sent a notification every time the plugin Pauses or Resumes an array operation due to the temperature of your drives.<br>If you would rather not get such notifications then leave this option set to **No**.    The notification is sent as a **Notice** category message to the targets specified under *<a href="Settings/Notifications">Settings->Notification Settings</a>*.
+> Pokud je tato volba nastavena na **Ano**, obdržíte oznámení pokaždé, když plugin Pozastaví nebo Obnoví operaci pole kvůli teplotě vašich disků.<br>Pokud si nepřejete taková oznámení dostávat, ponechte tuto volbu nastavenou na **Ne**. Oznámení je odesláno jako zpráva kategorie **Upozornění** na cíle definované v *<a href="Settings/Notifications">Nastavení->Nastavení upozornění</a>*.
 :end
+
 
 :parity_tune_shutdown_plug:
-> If set to **Yes** then automatically start a tidy shutdown of the server if any disk in the array or a cache pool reach the defined temperature threshold.
-> The temperatures are checked against the thresholds set for the **Critical** disk temperature levels. If a Critical temperature has been defined for an individual drive (accessed by clicking on the drive in the Main tab) then this is the value used.  If not the global setting (*<a href="Settings/DisplaySettings">Settings->Display Settings</a>) will be used.
+> Pokud je nastaveno na **Ano**, automaticky se spustí korektní vypnutí serveru, pokud některý z disků v poli nebo cache pool dosáhne definovaného teplotního limitu.
+> Teploty se porovnávají s prahy nastavenými pro **Kritickou** teplotu disku. Pokud je kritická teplota nastavena pro jednotlivý disk (přes kliknutí na disk v záložce Hlavní), použije se tato hodnota. Jinak se použije globální nastavení (*<a href="Settings/DisplaySettings">Nastavení->Zobrazení</a>*).
 >
->This option intended to be triggered if for some reason the system's cooling system is insufficient or if it has failed in some way. The idea is that you want to do a tidy shutdown before the disks become damaged due to overheating badly.   The shutdown that is triggered is functionally the same as would be the case of pressing the Shutdown button on the Main page of the unRaid GUI.  If notifications are enabled then you are sent one to indicate that this has happened.
+> Tato volba je určena pro situace, kdy je chlazení systému nedostatečné nebo došlo k jeho selhání. Cílem je provést korektní vypnutí dříve, než dojde k vážnému přehřátí disků. Vypnutí je funkčně stejné jako při stisknutí tlačítka Vypnout na hlavní stránce Unraid GUI. Pokud máte aktivována oznámení, obdržíte informaci, že k tomuto vypnutí došlo.
 >
->When the server is started up again after such a shutdown then when the array is started you will be notified that a temperature related shutdown happened in case you were not aware of the reason.
+> Při příštím spuštění serveru po takovém vypnutí budete při startu pole informováni, že došlo k vypnutí kvůli teplotě – pro případ, že byste o tom nevěděli.
 >
->**CAUTION:**  If the array is stopped while an array operation is incomplete then the progress so far is lost and it can only be restarted from the beginning.
+> **POZOR:** Pokud je pole zastaveno během probíhající operace, bude její dosavadní průběh ztracen a operaci bude možné spustit pouze znovu od začátku.
 :end
+
 
 :parity_tune_critical_plug:
-> This value indicates how close to the value set for the Critical Disk Temperature Threshold a disks temperature is allowed to reach before a shutdown of the server is triggered.
-> You may want a small positive value to trigger the pause before unRaid gets around to sending you a notification that the temperature critical threshold has been reached for a disk.
+> Tato hodnota určuje, jak blízko k nastavené Kritické Teplotě disku může teplota disku dosáhnout, než se spustí vypnutí serveru.
+> Můžete nastavit malé kladné číslo, aby se vypnutí provedlo ještě před tím, než Unraid odešle upozornění o dosažení kritické teploty.
 >
->If an explicit threshold has been defined for an individual drive then this is the value used.  If not the global setting will be used.
+> Pokud je pro jednotlivý disk nastavena konkrétní hodnota, použije se ona. Jinak se použije globální nastavení.
 :end
+
 
 :parity_tune_logging_plug:
-> Control the level of detail in entries.  The level of detail can be increased to help with debugging any problems using this plugin might encounter.
+> Určuje úroveň detailu zaznamenaných zpráv. Úroveň detailu lze zvýšit pro účely ladění problémů, na které by tento plugin mohl narazit.
 >
->Messages by this plugin are identified by the fact that they are shown as coming from
+> Zprávy tohoto pluginu jsou identifikovatelné podle toho, že jsou označeny jako odeslané z:
 >* **Parity Check Tuning**
 >* **Parity Problems Assistant**
->depending on which part of the plugin generated the messages
+>v závislosti na tom, která část pluginu je generovala.
 >
->With the **Basic** option set these will only be a small number of messages indicating that this plugin has taken some action.
+> Pokud je nastavena možnost **Základní**, zapisuje se jen několik zpráv indikujících, že plugin provedl nějakou akci.
 >
->Setting this option to **Debug** will result in additional entries being written to the syslog that give more information on what is happening when this plugin is running. They show how some of the internal operation of how the plugin is functioning. These additional entries are identified by the fact that they will have the word **DEBUG** added to the start of messages.  Some users (particularly those who have not used this plugin before) may like to use it to see more detail on how this plugin operates, but it is not expected that this option will be left enabled in normal running.
+> Nastavení na **Ladění (Debug)** způsobí, že se do systémového logu zapisují další zprávy s podrobnějšími informacemi o činnosti pluginu. Ukazují část vnitřního fungování pluginu. Tyto zprávy jsou označeny slovem **DEBUG** na začátku zprávy. Někteří uživatelé (zejména ti, kteří plugin používají poprvé) to mohou využít k lepšímu pochopení činnosti pluginu, ale pro běžný provoz se tato volba doporučuje vypnout.
 >
->Finally there is an additional setting of **Testing** that is only intended for use by the developer but is left here for convenience.  It will write even more verbose messages to the syslog but these are not likely to be interesting (or even meaningful) to the average user.  These messages will have the word **TESTING** added to the start of messages. You should only run this level of logging if you have been asked to as it can quickly fill up your syslog if you are not careful.
+> Dále je zde nastavení **Testování (Testing)**, které je určeno pouze pro vývojáře, ale je zde ponecháno pro případ potřeby. Zapíše ještě podrobnější zprávy do logu, ale tyto zprávy pravděpodobně nebudou běžnému uživateli nijak přínosné. Jsou označeny slovem **TESTING**. Tuto úroveň protokolování používejte pouze na výzvu – může rychle zaplnit systémový log.
 >
->Feedback is welcome as to whether it is worth introducing any intermediate option that outputs information type messages on the plugin's activity, while omitting some of the lower level detail that is aimed at diagnosing any problems that might be encountered while the plugin is running.
+> Oceníme zpětnou vazbu, zda má smysl přidat i nějakou střední úroveň protokolování, která by zobrazovala užitečné zprávy o aktivitě pluginu, ale vynechávala by nízkoúrovňové detaily pro ladění.
 >
->If you have Testing mode set for the logging then you can choose where you want log messages to be recorded.  The default is the standard system syslog and this is the inly option allowed in Basic mode.  The syslog is held in RAM so does not cause excessive writes to the flash drive.
->To facilitate with debugging problems then in Testing mode you can log the messages to the flash drive either instead of the syslog or in addition to the syslog. The resulting parityTuning.log file will be stored in the plugin's folder on the flash drive and providing this file to the developer will help with diagnosing any unexpected behaviour you encounter.
+> Pokud máte v protokolování zapnutý režim Testování, můžete si vybrat, kam se mají zprávy zapisovat. Výchozí je standardní systémový syslog, který je použit i při základním režimu. Syslog je v RAM, takže nezatěžuje flash disk.
+> Pro potřeby ladění můžete v testovacím režimu zapisovat zprávy i na flash disk – místo syslogu nebo společně s ním. Vznikne soubor `parityTuning.log` v adresáři pluginu na flash disku. Pokud tento soubor poskytnete vývojáři, pomůže to při diagnostice nečekaného chování pluginu.
 :end
+
 
 :parityProblems_type_plug:
-> Select the way you want to specify the start and end points.
+> Zvolte způsob, jakým chcete zadat počáteční a koncové body kontroly.
 >
-> You are likely to want to use absolute sector numbers if there are ones that have previously been listed in the syslog as being an error.
-> Using absolute sector numbers tends to be more precise and lead to shorter tests but can be more effort to set up.
+> Pravděpodobně budete chtít použít absolutní čísla sektorů, pokud jste je dříve zaznamenali v *syslogu* jako chybové.
+> Použití absolutních sektorů bývá přesnější a vede ke kratším testům, ale vyžaduje více úsilí při nastavení.
 >
-> The alternative is to use percentages.  When using percentages then the sector numbers these represent are calculated as percentages of the largest parity disk.
+> Alternativou je použití procent. Při použití procent jsou odpovídající sektory vypočítány jako procento z velikosti největšího parity disku.
 :end
+
 
 :parityProblems_start_plug:
-> Select where you want the check to be started from.  You can specify the start point as either a sector number or as a percentage of the size of the largest parity disk.
+> Zvolte, odkud má být kontrola spuštěna. Počáteční bod můžete zadat jako číslo sektoru nebo jako procento z velikosti největšího parity disku.
 >
-> Specifying absolute sectors is likely to be of particular use when you have extracted the sector numbers from the *syslog* when the original parity check reported errors on those sectors. In a future version of this plugin the plugin may be enhanced to automatically extract such sectors from the *syslog* and give you a drop down list but this feature is not yet implemented.
+> Zadání absolutních sektorů je užitečné zejména tehdy, pokud jste si čísla sektorů vypsali z *syslogu*, ve kterém byly při předchozí kontrole parity hlášeny chyby. V budoucí verzi pluginu může být přidána funkce pro automatické extrahování těchto sektorů ze *syslogu* a nabídnutí ve výběrovém seznamu, ale tato funkce zatím není implementována.
 >
-> In practice for technical reasons the check may start slightly earlier than the point you specify, but this will only be by a small amount.
+> Z technických důvodů může kontrola ve skutečnosti začít o něco dříve, než určíte, ale rozdíl bude jen nepatrný.
 :end
+
 
 :parityProblems_end_plug:
-> Select where you want the check to be ended.  You can specify the start point as either a sector number or as a percentage of the size of the largest parity disk.
+> Zvolte, kde má být kontrola ukončena. Konec lze stejně jako začátek zadat buď číslem sektoru, nebo procentem velikosti největšího parity disku.
 >
-> In practice for technical reasons the check may end later than the point you specify as a check is only made once a minute to see if the end point has been reached.
+> Z technických důvodů může kontrola skončit o něco později, než určíte, protože se konečný bod vyhodnocuje jen jednou za minutu.
 :end
 
-:parityProblems_correct_plug:
-> Specify whether you want to attempt to update parity to correct any error found,
-> or just do a read test to see if any parity errors are reported.
-:end
 
 :parityProblems_correct_plug:
-> Specify whether you want to attempt to update parity to correct any error found,
-> or just do a read test to see if any parity errors are reported.
+> Určete, zda si přejete pokusit se opravit paritu při nalezení chyby,
+> nebo zda má být provedena pouze čtecí kontrola pro zjištění, zda existují chyby parity.
 :end
+
 
 :parityProblems_check_plug:
-> When you click on the option to **Start Check** then a partial check is initiated that
-> will cover the start and end points that you have specified.  It will be a correcting check
-> if the option to **Write Corrections** is set to **Yes**, and a read-check otherwise.
+> Po kliknutí na možnost **Spustit kontrolu** bude zahájena částečná kontrola,
+> která pokryje vámi zadané počáteční a koncové sektory. Půjde o opravu parity,
+> pokud je možnost **Zapsat opravy** nastavena na **Ano**, jinak půjde pouze o čtecí kontrolu.
 :end
 
+
 :parityProblems_sectors_plug:
-> When you click on the option to **Show Sector Numbers** then the a dialog will be shown
-> that extracts entries from the syslog that have shown any sectors for which any parity
-> sector is displayed and whether the it was being corrected or is a parity error.
+> Po kliknutí na možnost **Zobrazit čísla sektorů** se zobrazí dialogové okno,
+> které extrahuje položky ze *syslogu*, v nichž jsou uvedeny sektory s chybami parity
+> a informace, zda šlo o opravu nebo pouze zjištění chyby.
 :end
+

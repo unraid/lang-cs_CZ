@@ -1,85 +1,94 @@
-30 seconds=
-1 minute=
-2 minutes=
-5 minutes=
-10 minutes=
-30 minutes=
-1 hour=
-2 hours=
-Bits per second=
-Bytes per second=
-CPU graph scaling=
-Disk Stats=
-Ethernet interface=
-Four=
-Header menu=
-Initial graphing mode=
-Initial real-time sliding window=
-Last day=
-Last 2 days=
-Last 3 days=
-Last week=
-Last 2 weeks=
-Last 3 weeks=
-Last month=
-Network graph display unit=
-Opening page=
-Pair=
-Placement of Stats menu=
-Position of disk utilization percentage=
-Real-time=
-Show disk size=
-Since start=
-Single=
-Storage=
-System graphs view per row=
-System Stats=
-Three=
-Tools menu=
-Viewable system graphs=
+30 seconds=30 sekund
+1 minute=1 minuta
+2 minutes=2 minuty
+5 minutes=5 minut
+10 minutes=10 minut
+30 minutes=30 minut
+1 hour=1 hodina
+2 hours=2 hodiny
+Bits per second=Bity za sekundu
+Bytes per second=Bajty za sekundu
+CPU graph scaling=Měřítko grafu procesoru
+Disk Stats=Statistiky disků
+Ethernet interface=Ethernetové rozhraní
+Four=Čtyři
+Header menu=Hlavička nabídky
+Initial graphing mode=Úvodní grafový režim
+Initial real-time sliding window=Úvodní posuvné okno v reálném čase
+Last day=Poslední den
+Last 2 days=Poslední 2 dni
+Last 3 days=Poslední 3 dni
+Last week=Poslední týden
+Last 2 weeks=Poslední 2 týdny
+Last 3 weeks=Poslední 3 týdny
+Last month=Poslední měsíc
+Network graph display unit=Jednotka zobrazení grafu sítě
+Opening page=Otevíraná stránka
+Pair=Dva
+Placement of Stats menu=Umístění nabídky statistik
+Position of disk utilization percentage=Pozice využití disku v procentech
+Real-time=V reálném čase
+Show disk size=Zobrazit velikost disku
+Since start=Od spuštění
+Single=Jeden
+Storage=Úložiště
+System graphs view per row=Počet systémových grafů na řádek
+System Stats=Systémové statistiky
+Three=Tři
+Tools menu=Nabídka nástrojů
+Viewable system graphs=Zobrazitelné systémové grafy
 
 :stats_utilization_plug:
-> The disk utilization percentage number can be positioned either at the start (left) or at the end (right) of the bar.
+> Procento využití disku lze umístit buď na začátek (vlevo), nebo na konec (vpravo) pruhu.
 >
-> Left will align all numbers, while right lets the number float depending on its value.
+> Umístění vlevo zarovná všechna čísla, zatímco umístění vpravo umožní, aby se číslo pohybovalo podle své hodnoty.
 :end
+
 
 :stats_graphs_plug:
-> Select which system information needs to be displayed. Internally all information is always gathered and stored.
+> Vyberte, které systémové informace se mají zobrazit. Interně jsou vždy shromažďovány a ukládány všechny informace.
 >
-> This setting only affects what is being displayed.
+> Toto nastavení ovlivňuje pouze to, co se zobrazuje.
 :end
+
 
 :stats_scaling_plug:
-> Select the CPU graph scaling to be automatic or fixed at 100%.
+> Zvolte, zda má mít graf CPU automatické měřítko, nebo pevně nastavené na 100 %.
 :end
+
 
 :stats_view_plug:
-> Select how many graphs will be displayed in a single row. The width is automatically adjusted to the number of graphs and the screen resolution.
+> Vyberte, kolik grafů se má zobrazit v jednom řádku. Šířka se automaticky přizpůsobí počtu grafů a rozlišení obrazovky.
 >
-> Graph samples are internally done with a one minute interval, this setting does not change the resolution, just the width of a graph.
+> Vzorkování grafů probíhá interně v minutových intervalech; toto nastavení pouze mění šířku grafu, nikoli jeho rozlišení.
 :end
+
 
 :stats_disk_size_plug:
-> Show the size of each disk at the right side of the disk usage graph. Size is always displayed using the highest possible unit.
+> Zobrazí velikost každého disku na pravé straně grafu využití disku. Velikost je vždy zobrazena v nejvyšší možné jednotce.
 :end
+
 
 :stats_ethernet_plug:
-> When more than one interface is present then select the interface to be displayed. Internally statistics of all available interfaces is kept.
+> Pokud je přítomno více síťových rozhraní, vyberte to, které se má zobrazit. Interně jsou uchovávány statistiky všech dostupných rozhraní.
 :end
+
 
 :stats_unit_plug:
-> Select how interface (network) speeds are displayed, common is bits per second.
+> Vyberte, jak se mají zobrazovat rychlosti rozhraní (sítě), běžně v bitech za sekundu.
 :end
+
 
 :stats_initial_plug:
-> The system graphs can be viewd over different periods, select here the intial period. On the system stats page itself this can be changed to any of the other choices.
+> Systémové grafy lze zobrazit za různá časová období, zde vyberte výchozí období. Na stránce se systémovými statistikami jej lze kdykoli změnit.
 >
-> Internally information is kept with a monthly rotating mechanism. Each day is stored in a separate file.
+> Interně se data ukládají pomocí měsíčního rotačního mechanismu. Každý den je uložen do samostatného souboru.
 :end
 
+
 :stats_realtime_plug:
-> Real-time graphing is done in a sliding window fashion. E.g. 5 minutes are first filled and next start to slide with each new sample added at the end.
+> Zobrazení v reálném čase probíhá pomocí posuvného okna. Např. 5 minut se nejprve naplní a poté se s každým novým vzorkem posouvají.
 >
-> This setting sets the initial duration of the sliding window, it can be changed on the system stats page itself.
+> Toto nastavení určuje počáteční délku posuvného okna; lze jej změnit na stránce se systémovými statistikami.
 :end
+

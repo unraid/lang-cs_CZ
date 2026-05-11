@@ -1,5 +1,5 @@
-Not available=
-P + Q algorithm=
-System Overview=
-Unraid server=
-Unraid system=
+Not available=Není k dispozici
+P + Q algorithm=Algoritmus P + Q
+System Overview=Přehled systému
+Unraid server=Server Unraid
+Unraid system=Systém Unraid

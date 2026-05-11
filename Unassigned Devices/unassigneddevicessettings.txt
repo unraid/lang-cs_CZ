@@ -1,223 +1,241 @@
-Add=
-Auto Mount USB Devices=
-Case-sensitive names=
-Change Disk UUID=
-Change UUID=
-Change Disk UUID=
-Command times=
-Common Script=
-Common Settings=
-Destructive Mode=
-Disabled=
-Disk spin down is managed by Unraid=
-Enable NFS export=
-Enable SMB Security=
-Enable Time Machine=
-Enter Disk Password=
-Enter the Remote Server name or IP address and the results from the Remote Server Test will show in the Result text area=Enter the Remote Server name or IP address and the results from the Remote Server Test will show in the **Result** text area
-Enter Pool Mount Point=
-Legacy Mount Point Compatibility=
-Mount SSDs with discard option=
-NFS Security=
-NFS Settings=
-NFS must be enabled in Settings->NFS to enable NFS Export=
-NFS Version to use when Mounting Remote Shares=
-Public=
-Private=
-Private Hidden=
-Refresh and Update=
-Remote Share Mount Wait Time=
-Rule=
-Select Disk=
-See Help=
-Set Encrypted Disk Password=
-Set Password=
-Set Pool Mount Point=
-Set the Pool Mount Point for this disk=
-Set the disk Password=
-SMB Settings=
-SMB Sharing=
-Specify SMB Version when Mounting Remote Shares=
-Spin down disks=
-Test=
-Testing=
-Test the Remote Server=
-The Unassigned Devices Plus plugin must be installed to enable Destructive Mode=
-This is a tool to help troubleshoot Remote Servers ability to serve SMB and NFS shares=
-Time Machine volume size limit=
-to SMB share config=
-Udev and Hotplug=
-Unassigned Devices=
-Unraid 6.10 or later is required for NFSv4 support=
-Upgrade ZFS Pool=
-Use only when directed for support because the messages can flood the log=
-Warning=
-Windows may require a valid User to be defined even for Public shares=
-Working=
+Add=Přidat
+Auto Mount USB Devices=Automaticky připojit USB zařízení
+Case-sensitive names=Rozlišovat velká a malá písmena v názvech
+Change Disk UUID=Změnit UUID disku
+Change UUID=Změnit UUID
+Command times=Časy příkazů
+Common Script=Obecný skript
+Common Settings=Obecné nastavení
+Destructive Mode=Destruktivní režim
+Disabled=Deaktivováno
+Disk spin down is managed by Unraid=Vypínání disku je řízeno Unraidem
+Enable NFS export=Aktivovat NFS export
+Enable SMB Security=Aktivovat zabezpečení SMB
+Enable Time Machine=Aktivovat Time Machine
+Enter Disk Password=Zadej heslo k disku
+Enter the Remote Server name or IP address and the results from the Remote Server Test will show in the Result text area=Zadej název nebo IP adresu vzdáleného serveru a výsledky testu se zobrazí v poli **Výsledek**
+Enter Pool Mount Point=Zadej přípojný bod pro pool
+Legacy Mount Point Compatibility=Kompatibilita s tradičními přípojnými body
+Mount SSDs with discard option=Připojit SSD s možností discard
+NFS Security=Zabezpečení NFS
+NFS Settings=Nastavení NFS
+NFS must be enabled in Settings->NFS to enable NFS Export=NFS musí být aktivní v Nastavení→NFS pro zapnutí exportu
+NFS Version to use when Mounting Remote Shares=Verze NFS pro připojování vzdálených sdílení
+Public=Veřejné
+Private=Soukromé
+Private Hidden=Skryté soukromé
+Refresh and Update=Obnovit a aktualizovat
+Remote Share Mount Wait Time=Čas čekání na připojení vzdáleného sdílení
+Rule=Pravidlo
+Select Disk=Vyber disk
+See Help=Viz Nápověda
+Set Encrypted Disk Password=Nastavit heslo pro šifrovaný disk
+Set Password=Nastavit heslo
+Set Pool Mount Point=Nastavit přípojný bod pro pool
+Set the Pool Mount Point for this disk=Nastav přípojný bod poolu pro tento disk
+Set the disk Password=Nastav heslo pro disk
+SMB Settings=Nastavení SMB
+SMB Sharing=Sdílení přes SMB
+Specify SMB Version when Mounting Remote Shares=Zadej verzi SMB pro připojení vzdálených sdílení
+Spin down disks=Uspat disky
+Test=Test
+Testing=Testuji
+Test the Remote Server=Otestovat vzdálený server
+The Unassigned Devices Plus plugin must be installed to enable Destructive Mode=Pro aktivaci destruktivního režimu musí být nainstalován plugin "Unassigned Devices Plus"
+This is a tool to help troubleshoot Remote Servers ability to serve SMB and NFS shares=Tento nástroj pomáhá při řešení problémů se vzdálenými servery poskytujícími SMB a NFS sdílení
+Time Machine volume size limit=Limit velikosti svazku pro Time Machine
+to SMB share config=do konfigurace SMB sdílení
+Udev and Hotplug=Udev a Hotplug
+Unassigned Devices=Nezařazená zařízení
+Unraid 6.10 or later is required for NFSv4 support=Pro podporu NFSv4 je potřeba Unraid 6.10 nebo vyšší
+Upgrade ZFS Pool=Upgradovat ZFS pool
+Use only when directed for support because the messages can flood the log=Používej pouze při podpoře – výpisy mohou zahlcovat protokol
+Warning=Varování
+Windows may require a valid User to be defined even for Public shares=Windows může vyžadovat platného uživatele i pro veřejná sdílení
+Working=Probíhá
 
 ; Help
 ;
 :ud_settings_plus_plug:
-> **Note:** The 'Unassigned Devices Plus' plugin must be installed in order to mount HFS+ and exFAT disk formats, and enable destructive mode.
+> **Poznámka:** Pro připojení disků formátovaných jako HFS+ nebo exFAT a pro aktivaci destruktivního režimu musí být nainstalován plugin "Unassigned Devices Plus".
 :end
+
 
 :ud_settings_common_script_plug:
-> If set, this script will run before the device script. The action is in the environment variable **$ACTION**. Be sure you reference all commands with their full path.
+> Pokud je aktivováno, tento skript bude spuštěn před skriptem konkrétního disku. Akce bude dostupná v proměnné **$ACTION**. Ujisti se, že všechny příkazy obsahují plnou cestu.
 :end
+
 
 :ud_settings_destructive_plug:
-> If enabled, this will allow you to erase and format partitions using Unassigned Devices. This cannot be enabled unless the 'Unassigned Devices Plus' plugin is installed.
+> Pokud je tato možnost aktivována, budeš moci pomocí Unassigned Devices mazat a formátovat oddíly. Tuto funkci lze aktivovat pouze tehdy, pokud je nainstalován plugin "Unassigned Devices Plus".
 :end
+
 
 :ud_settings_mount_usb_devices_plug:
-> When set to **Yes**, will auto mount a new USB device and share it without user intervention.
+> Pokud je tato možnost nastavena na **Ano**, nový USB disk bude automaticky připojen a sdílen bez uživatelského zásahu.
 :end
+
 
 :ud_settings_discard_plug:
-> Mount SSDs that support discard with 'discard' option. If you are using the SSD Trim Settings to do a periodic trim of SSDs you can set this to **No**.
+> SSD disky, které podporují "Discard", budou připojeny s touto možností. Pokud používáš plánované TRIMování, můžeš tuto možnost nastavit na **Ne**.
 :end
+
 
 :ud_settings_symlinks_plug:
-> Set to **Yes** to create symlinks for /mnt/remotes/ at /mnt/disks/.
->
-> This is for backwards compatibility of VM and Docker Container mappings to the /mnt/disks/ mount point.
-> You are encouraged to change your mappings to the /mnt/remotes/ mount point.
->
-> If you do not need the backwards compatibility, leave it set to **No**.
+> Nastav na **Ano**, pokud chceš vytvořit symlinky z /mnt/remotes/ na /mnt/disks/.
+> To zajišťuje zpětnou kompatibilitu pro přiřazení v kontejnerech VM a Dockeru, které používají /mnt/disks/.
+> Pokud zpětnou kompatibilitu nepotřebuješ, ponech tuto možnost jako **Ne**.
 :end
+
 
 :ud_settings_remote_share_wait_plug:
-> This is the time in seconds to wait before mounting remote shares when the array is first started.
->
+> Čas v sekundách, jak dlouho čekat před připojením vzdálených sdílení po startu arraye.
 :end
+
 
 :ud_settings_specify_smb_vers_plug:
-> Set to **No** for Unassigned Devices to first try to mount remote shares by not setting the SMB version when mounting.
+> Nastavte na **Ne** u Unassigned Devices, aby se při připojování vzdálených sdílení nejprve neuváděla verze SMB.
 >
-> Set to **Yes** for Unassigned Devices to only mount SMB remote shares specifying the SMB version.
+> Nastavte na **Ano** u Unassigned Devices, aby se vzdálená SMB sdílení připojovala pouze s výslovným uvedením verze SMB.
 >
-> Some remote servers need to have the version specified.
+> Některé vzdálené servery vyžadují, aby byla verze SMB specifikována.
 :end
+
 
 :ud_settings_debug_level_plug:
-> Setting a Debug Log Level adds additional logging in specific areas of UD for troubleshooting.  Set the Debug Log Level to debug a specific area of UD.
+> Nastavení úrovně ladicího protokolu (Debug Log Level) přidává další záznamy v konkrétních oblastech UD pro řešení problémů. Nastavte úroveň ladicího protokolu pro ladění určité oblasti UD.
 >
-> Set to **None** to turn off debug logging.
+> Nastavte na **Žádná** (None) pro vypnutí ladicího protokolování.
 >
-> **Udev and Hotplug** udev, disk discovery and hotplug debug.
+> **Udev a Hotplug** – ladění udev, detekce disků a hotplug.
 >
-> **Refresh and Update** to find issues where UD hangs.
+> **Obnovení a aktualizace** – pro hledání problémů, kde UD zamrzá.
 >
-> **Command times** command execution times. **Warning:** very chatty.
+> **Časy příkazů** – doba vykonávání příkazů. **Pozor:** velmi podrobné záznamy.
 >
-> **Note:** Don't leave the Debug Log Level on for extended periods of time.  It can add a lot of log messages to the syslog.
+> **Poznámka:** Nedržte úroveň ladicího protokolu zapnutou po delší dobu. Může to způsobit velké množství zpráv v syslogu.
 :end
+
 
 :ud_settings_specify_nfs_vers_plug:
-> Set to **Auto** to mount all NFS Remote Shares auto negotiating the NFS version to use.
+> Nastavte na **Auto** pro automatické připojení všech vzdálených NFS sdílení s automatickým vyjednáním verze NFS.
 >
-> If the **Auto** setting doesn't work or only mounts NFSv3, you need to use the **NFSv4** setting because your version of Unraid will not auto negotiate NFSv4.
+> Pokud nastavení **Auto** nefunguje nebo připojuje pouze NFSv3, je třeba použít nastavení **NFSv4**, protože vaše verze Unraidu automaticky nevyjednává NFSv4.
 :end
+
 
 :ud_settings_smb_security_plug:
-> Set the user level of SMB Sharing:
+> Nastavte uživatelskou úroveň sdílení SMB:
 >
-> + Set to **Disabled** to disable SMB sharing.
-> + Set to **Public** will share devices, Remote SMB/NFS shares, and iso Mounts Public with read and write access.
-> + Set to **Private** to enable SMB Security on SMB shares. Set access by user to allow access and whether or not the user can write to the share.
-> + Set to **Private Hidden** to enable SMB Security on SMB shares that will not be visible. Set access by user to allow access and whether or not the user can write to the share.
+> + Nastavte na **Disabled** pro deaktivaci SMB sdílení.
+> + Nastavte na **Public** pro veřejné sdílení zařízení, vzdálených SMB/NFS sdílení a připojení ISO s přístupem pro čtení i zápis.
+> + Nastavte na **Private** pro povolení SMB zabezpečení u SMB sdílení. Nastavte přístup podle uživatele, který určí, zda má uživatel přístup a zda může do sdílení zapisovat.
+> + Nastavte na **Private Hidden** pro povolení SMB zabezpečení u SMB sdílení, která nebudou viditelná. Nastavte přístup podle uživatele, který určí, zda má uživatel přístup a zda může do sdílení zapisovat.
 >
-> Windows Server Signing:
+> Podpisování serveru ve Windows:
 >
-> If you are unable to browse SMB shares with Windows 11 version 24H2 or newer, you need to make some changes to accomodate a new feature called Server Signing.  Server Signing is enabled in Unraid and you need to make changes to access Public shares.
-> You can <u><a href='https://techcommunity.microsoft.com/t5/storage-at-microsoft/accessing-a-third-party-nas-with-smb-in-windows-11-24h2-may-fail/ba-p/4154300', target='_blank'>_(disable it in Windows)_</a></u>, or to work with Unraid with Server Signing enabled, the easiest way is to create a user (with a password set) in Unraid with the same name as the Windows account you are using, Windows should then ask you for the credentials.
-> If you are using a Microsoft account, it may be better to just create a user in Unraid with a simple username and set a password, then in Windows go to Control Panel -> Credential Manager -> Windows credentials -> Add a Windows Credential and add the correct Unraid server name and credentials.
+> Pokud nemůžete prohlížet SMB sdílení ve Windows 11 verze 24H2 nebo novější, je potřeba provést některé úpravy kvůli nové funkci zvané Server Signing. Server Signing je v Unraidu povoleno a je nutné provést změny, aby bylo možné přistupovat k veřejným sdílením.
+> Můžete jej <u><a href='https://techcommunity.microsoft.com/t5/storage-at-microsoft/accessing-a-third-party-nas-with-smb-in-windows-11-24h2-may-fail/ba-p/4154300', target='_blank'>_(zakázat ve Windows)_</a></u>, nebo aby Unraid fungoval se Server Signing zapnutým, je nejjednodušší vytvořit v Unraidu uživatele (s nastaveným heslem) se stejným jménem jako používáte ve Windows, Windows by pak měly požádat o přihlašovací údaje.
+> Pokud používáte Microsoft účet, může být lepší vytvořit v Unraidu uživatele s jednoduchým uživatelským jménem a heslem, a pak ve Windows přejít do Ovládací panely -> Správce pověření -> Povolení Windows -> Přidat pověření Windows a zadat správný název Unraid serveru a přihlašovací údaje.
 :end
+
 
 :ud_settings_case_sensitive_plug:
-> Controls whether filenames are case-sensitive.
+> Řídí, zda jsou názvy souborů citlivé na velikost písmen.
 >
-> The default setting of **Auto** allows clients that support case sensitive filenames (Linux CIFS and NFS) to tell the Samba server on a per-packet basis that they wish to access the file system in a case-sensitive manner (to support UNIX case sensitive semantics). No Windows system supports case-sensitive filenames so setting this option to auto is the same as setting it to No for them; however, the case of filenames passed by a Windows client will be preserved. This setting can result in reduced performance with very large directories because Samba must do a filename search and match on passed names.
+> Výchozí nastavení **Auto** umožňuje klientům, kteří podporují názvy souborů citlivé na velikost písmen (Linux CIFS a NFS), sdělit Samba serveru pro každý paket zvlášť, že chtějí přistupovat k souborovému systému s rozlišením velikosti písmen (pro podporu unixových pravidel). Žádný Windows systém nepodporuje názvy souborů citlivé na velikost písmen, takže nastavení na Auto je pro Windows klienty stejné jako nastavení na No; nicméně velikost písmen v názvech předaných Windows klientem bude zachována. Toto nastavení může způsobit snížení výkonu u velmi velkých adresářů, protože Samba musí vyhledávat a porovnávat názvy souborů.
 >
-> A setting of **Yes** means that files are created with the case that the client passes, and only accessible using this same case. This will speed very large directory access, but some Windows applications may not function properly with this setting. For example, if "MyFile" is created but a Windows app attempts to open "MYFILE" (which is permitted in Windows), it will not be found.
+> Nastavení **Yes** znamená, že soubory jsou vytvářeny s velikostí písmen, kterou klient předá, a jsou přístupné pouze s touto přesnou velikostí písmen. Toto nastavení zrychlí přístup k velmi velkým adresářům, ale některé Windows aplikace nemusí správně fungovat. Například pokud je vytvořen soubor „MyFile“, ale Windows aplikace se pokusí otevřít „MYFILE“ (což Windows běžně umožňuje), soubor nebude nalezen.
 >
-> A value of **Forced lower** is special: the case of all incoming client filenames, not just new filenames, will be set to lower-case. In other words, no matter what mixed case name is created on the Windows side, it will be stored and accessed in all lower-case. This ensures all Windows apps will properly find any file regardless of case, but case will not be preserved in folder listings.
+> Hodnota **Forced lower** je speciální: velikost písmen u všech příchozích názvů souborů od klientů, nejen nových, bude převedena na malá písmena. Jinými slovy, bez ohledu na to, jaký název s různou velikostí písmen je vytvořen na Windows straně, bude uložen a přístupný vždy v malých písmenech. To zajistí, že všechny Windows aplikace soubor správně najdou bez ohledu na velikost písmen, ale velikost písmen nebude zachována ve výpisu složek.
 :end
+
 
 :ud_time_machine_plug:
-> Set to **Yes** to enable Time Machine settings on the SMB shares.
+> Nastav na **Ano**, pokud chceš povolit Time Machine podporu u SMB sdílení.
 :end
+
 
 :ud_time_machine_vol_size_plug:
-> This limits the reported volume size, preventing Time Machine from using the entire real disk space for backup. For example, setting this value to "1024" would limit the reported disk space to 1GB.
+> Toto omezuje hlášenou velikost svazku, čímž zabraňuje Time Machine používat celý skutečný diskový prostor pro zálohu. Například nastavení této hodnoty na "1024" omezí hlášený diskový prostor na 1 GB.
 :end
+
 
 :ud_settings_force_user_plug:
-> There are times when permissions on SMB shares aren't handled as expected. Turning this feature on can help with those permissions.
-> This applies to all devices mounted with Unassigned Devices.
-> The down side is that it overrides Linux group permissions. If you are unsure about whether or not this is necessary, leave it disabled.
+> Někdy nejsou oprávnění na SMB sdíleních zpracována podle očekávání. Zapnutí této funkce může pomoci s těmito oprávněními.
+> Toto platí pro všechna zařízení připojená pomocí Unassigned Devices.
+> Nevýhodou je, že se tím přepíší skupinová oprávnění Linuxu. Pokud si nejste jisti, zda je to nutné, ponechte funkci vypnutou.
 :end
+
 
 :ud_settings_nfs_security_plug:
-> Set to **Yes** to export Unassigned Devices with NFS sharing. Shares are exported Public with read and write access or Private with the rule you set. Access is controlled with permission settings on files and folders.
+> Aktivuj, pokud chceš exportovat nezarovnané disky přes NFS. Přístup bude veřejný nebo řízený podle nastavených pravidel.
 :end
+
 
 :ud_settings_nfs_rules_plug:
-> Put the rule for each IP address on a separate line and terminate the Rule with a new line.
-> You cannot enter a Rule in the format IP1,IP2(...).  Unraid does not format the exports file in that format.
+> Zadejte pravidlo pro každou IP adresu na samostatný řádek a pravidlo ukončete novým řádkem.
+> Nelze zadat pravidlo ve formátu IP1,IP2(...). Unraid tento formát v souboru exports nepodporuje.
 
-> The default rules for every NFS Rule are - async and no_subtree_check.
+> Výchozí pravidla pro každé NFS pravidlo jsou: async a no_subtree_check.
 
-> **Note:**
+> **Poznámka:**
 >
-> The Public default Rule used is '*(rw,sec=sys,insecure,anongid=100,anonuid=99,all_squash)'.
+> Veřejné výchozí pravidlo je: '*(rw,sec=sys,insecure,anongid=100,anonuid=99,all_squash)'.
 >
-> The Private default Rule used is '*(rw,sec=sys,insecure,anongid=100,anonuid=99,no_root_squash)'.
+> Soukromé výchozí pravidlo je: '*(rw,sec=sys,insecure,anongid=100,anonuid=99,no_root_squash)'.
+
 :end
+
 
 :ud_settings_disk_pass_plug:
-> Select the disk that you want to set a Password. This is the password for this disk only and does not affect the array password/passphrase. Leave password blank to use the array password/passphrase for luks encrypted disks.
+> Vyber disk, pro který chceš nastavit heslo. Pokud ponecháš prázdné, použije se heslo/heslová fráze pole.
 :end
+
 
 :ud_settings_change_uuid_plug:
-> Select the disk that you want to change the UUID. This is useful when a XFS formatted disk has been removed from the array and has the same UUID as an array disk. Drive must be unmounted to change the UUID.
+> Vyber disk, jehož UUID chceš změnit. Vhodné, pokud disk dříve patřil do pole a UUID koliduje. Disk musí být odpojen.
 >
-> **Note:** Don't change the UUID of a pooled disk.
+> **Poznámka:** Neměň UUID u disků v poolech.
 :end
+
 
 :ud_settings_zfs_upgrade_plug:
-> Select the disk that you want to upgrade to the latest ZFS version. Drive must be mounted to upgrade the ZFS Pool.
+> Vyber disk, který chceš upgradovat na novou verzi ZFS. Musí být připojený.
 :end
+
 
 :ud_remote_server_test_plug:
-> Remote Servers need to have SMB and/or NFS enabled.  This will check that the SMB and/or NFS ports are open.  The 'showmount -e <server>' command on Unraid must also show NFS mounts available.
+> Vzdálené servery musí mít povolené SMB a/nebo NFS. Tento test zkontroluje, zda jsou porty SMB a/nebo NFS otevřené. Příkaz 'showmount -e <server>' na Unraidu musí také zobrazit dostupné NFS mounty.
 
-> For SMB to be considered online, the Remote Server has to have the SMB port open.
+> Aby byl SMB považován za online, musí mít vzdálený server otevřený SMB port.
 
-> For NFS to be considered online, the Remote Server has to have the NFS port open and the 'showmount -e' command has to show NFS shares.
-> There can be a case where the port is open and 'showmount -e' doesn't show NFS shares and NFS will not work.
+> Aby byl NFS považován za online, musí mít vzdálený server otevřený NFS port a příkaz 'showmount -e' musí zobrazit NFS sdílení.
+> Může nastat situace, kdy je port otevřený, ale 'showmount -e' nezobrazí NFS sdílení, a NFS nebude fungovat.
 
-> If showmount does not return any NFS shares on a reachable remote server like a Synology, it generally means one of the following:
+> Pokud showmount nevrací žádné NFS sdílení na dosažitelném vzdáleném serveru, například Synology, obvykle to znamená jednu z následujících situací:
 
-> No NFS Shares Exported:
+> Žádná NFS sdílení nejsou exportována:
 
-> The server might not have any directories configured for NFS export. Check the NFS configuration on the Synology device and ensure that folders intended for NFS sharing are explicitly exported.
+> Server nemusí mít žádné adresáře nakonfigurované pro NFS export. Zkontrolujte konfiguraci NFS na zařízení Synology a ujistěte se, že složky určené pro sdílení přes NFS jsou explicitně exportovány.
 
-> Access Restrictions:
+> Přístupová omezení:
 
-> NFS shares may be configured with IP-based access restrictions. Synology devices allow you to specify which IP addresses or networks can access each NFS share. If your IP address is not allowed, the NFS share will not appear in showmount output.
+> NFS sdílení může být nakonfigurováno s IP-based přístupovými omezeními. Zařízení Synology umožňují určit, které IP adresy nebo sítě mohou přistupovat ke každému NFS sdílení. Pokud vaše IP adresa není povolena, NFS sdílení se v showmount výstupu nezobrazí.
 
-> NFS Service Not Enabled:
+> NFS služba není povolena:
 
-> The NFS service on the Synology might not be enabled. Verify this in the Synology DSM settings under Control Panel > File Services > NFS. Enable NFS if it is currently disabled.
+> Služba NFS na Synology nemusí být zapnutá. Ověřte to v nastavení Synology DSM pod Ovládacím panelem > Služby souborů > NFS. Zapněte NFS, pokud je aktuálně vypnuta.
 
-> Firewall or Network Configuration:
+> Firewall nebo síťová konfigurace:
 
-> The Synology device may have firewall rules blocking the showmount request or the required RPC communication. Ensure that the firewall settings allow traffic on NFS-related ports (typically 2049 for NFS and 111 for RPC).
+> Zařízení Synology může mít firewall pravidla, která blokují showmount požadavek nebo potřebnou RPC komunikaci. Ujistěte se, že firewall umožňuje provoz na NFS portech (typicky 2049 pro NFS a 111 pro RPC).
 
-> Synology Export Options:
+> Exportní možnosti Synology:
 
-> The Synology NFS settings can sometimes require enabling Enable NFS at the top level and specifying Allow NFSv3 if you are using clients that expect NFSv3. Check Control Panel > File Services > NFS to ensure proper configuration.
+> Nastavení NFS na Synology může vyžadovat zapnutí "Povolit NFS" na nejvyšší úrovni a specifikaci "Povolit NFSv3", pokud klienti očekávají NFSv3. Zkontrolujte Ovládací panel > Služby souborů > NFS, zda je konfigurace správná.
 
-> By ensuring that NFS is enabled, configured with the correct permissions, and exported directories are allowed for your client IP, showmount should list the available exports.
+> Zajištěním, že NFS je povoleno, správně nakonfigurováno s potřebnými oprávněními a exportované adresáře jsou povoleny pro vaši klientskou IP, by showmount měl zobrazit dostupné exporty.
+
 :end
+
